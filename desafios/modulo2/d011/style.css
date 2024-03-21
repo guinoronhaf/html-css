@@ -1,0 +1,8 @@
+div {
+    width: 100vw; /*ocupar tudo da largura e da altura.*/
+    height: 100vh;
+    background: url(../d011/imagens/espaco.jpg);
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+}

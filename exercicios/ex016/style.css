@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        /*height: 100%;*/
+    }
+
+    body{
+        background-image: linear-gradient(to right, #038C3E, #0CF25D);
+    }
+
+    main{
+        background-color: white;
+        border-radius: 10px; /*Bordas arredondadas*/
+        box-shadow: 5px 5px 15px #025951; /*Sombra da caixa --> tamanho pro lado, pra baixo, o quanto espalha e a cor.*/
+        width: 600px; /*Largura da caixa de texto*/
+        padding: 10px; /*Folga pra não comer as laterais*/
+        margin: auto; /*Centralizar automaticamente*/
+    }
+
+    h1{
+        color: #034159;
+        text-align: center;
+        text-shadow: 1px 1px 0px black;
+    }
+
+    h2{
+        color: #02735E;
+    }
+    
+    p{
+        text-align: justify;
+    }

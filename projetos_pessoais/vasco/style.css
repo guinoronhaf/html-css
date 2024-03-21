@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+root {
+    --laranja1: #EA5F33;
+    --laranja2: #E41D2D;
+}
+
+body {
+    margin: 0px;
+    background-color: grey;
+}
+
+
+header {
+    background-image: linear-gradient(to bottom, grey, black);
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+header > #escudo {
+    display: block;
+    margin: auto;
+}
+
+header > h1 {
+    font-family: 'Josefin Sans',Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+}
+
+header > h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Kaushan Script', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+nav {
+    padding-top: 30px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+main {
+    background-color: white;
+    min-width: 320px;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#historia > h2 {
+    color: black;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.85em;
+    margin-top: 0px;
+}
+
+.texto {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;  
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.container {
+    width: 50%;
+    height: 200px;
+    display: flex;
+    gap: 5px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+}
+
+.container img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all ease-out 1s;
+    cursor: pointer;
+}
+
+.container img:hover {
+    width: 100%;
+}
+
+.frase {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin: 5px -20px 5px -20px;
+}

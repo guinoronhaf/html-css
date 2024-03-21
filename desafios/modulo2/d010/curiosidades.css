@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'android';
+    src: url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(96, 211, 157);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgb(76, 185, 112), rgb(5, 94, 45));
+    height: auto;
+    width: auto;
+    padding-top: 2px;
+    margin-top: 0px;
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+}
+
+header > h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.404);
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+header > p {
+    color: white;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 0.75em;
+}
+
+nav {
+    padding: 20px;
+}
+
+nav > a {
+    color: white;
+    font-family: 'Oswald', 'Times New Roman', Times, serif;
+    font-size: 0.80em;
+    margin-right: 30px;
+    margin-left: 5px;
+    text-decoration: none;
+    transition-duration: 0.5s; /*demora 0.5s pra aparecer a caixa verde*/
+}
+
+nav > a:hover {
+    background-color: rgb(76, 185, 112);
+    padding: 3px;
+    border-radius: 3px;
+}

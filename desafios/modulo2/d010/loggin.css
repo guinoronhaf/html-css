@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+:root {
+    --verde1: rgb(76, 185, 112);
+    --verde2: rgb(5, 94, 45);
+}
+
+@font-face {
+    font-family: 'android';
+    src: url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--verde1);
+}
+
+#container {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+#menu {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.404);
+}
+
+#menu > h1 {
+    font-family: 'android', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#menu > h3 {
+    font-family: 'android', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#menu > p {
+    background-color: gray;
+    font-family: 'android', Arial, Helvetica, sans-serif;
+    font-size: 0.6em;
+    font-weight: lighter;
+    width: 350px;
+    margin-left: 15px;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px;
+}
+
+#email {
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+#senha {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+button > a {
+    text-decoration: none;
+    font-family: 'android', Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /*quer dizer que vai usar a que encontrar primeiro na máquina (safe combination).*/
+
+            /*Medidas Absolutas
+            cm, mm, in(polegadas), px (RECOMENDADO), pt, pc
+            
+            Medidas Relativas
+            em(altura do M maiúsculo - RECOMENDADO) , ex (altura-x), rem, vw (porcentagem da largura da tela), vh(porcentagem da altura da tela)
+            Geralmente, 16px = 1em 
+            */
+            font-size: 1em; /*Normalmente, o tamanho padrão*/
+            /*lighter normal bold bolder*/
+        }
+
+        h1 {
+            /* shorthand font (condensa tudo em uma linha)
+
+             - font-style -> font-weight -> font-size -> font-family
+             */
+            font: italic bolder 3em sans-serif;
+        }
+
+        h2{
+            font: bold 2em sans-serif;
+        }
+    </style>
+</head>
+<body>
+   <h1>Trabalhando com fontes</h1>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque iste et, velit accusamus nesciunt ducimus sed corporis quis doloremque dicta nam fuga molestias accusantium. Doloribus sit deleniti optio? Necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aspernatur cupiditate iure in quibusdam reiciendis molestias perferendis. Esse aliquid recusandae pariatur aperiam, doloremque expedita, exercitationem fuga nobis eveniet, officiis voluptate.</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui recusandae adipisci sint veniam, ipsa voluptatum suscipit quisquam labore, eos quidem. Laborum architecto delectus explicabo et porro quibusdam id nesciunt?</p>
+   <h2>Subtítulo do exercício</h2>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia dignissimos esse, nobis ex cumque nostrum enim quas, libero, voluptatem recusandae corrupti quisquam suscipit officiis numquam dicta itaque a pariatur!</p>
+</body>
+</html>
