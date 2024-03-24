@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100vh;
+    font-size: 14px;
+}
+
+body {
+    background-color: #282828;
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+    max-width: 550px;
+    margin: auto;
+    display: flex; /*ao fazer isso, ficam todos lado a lado*/
+    flex-direction: column; /*resolve o problema acima*/
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header > img {
+    border-radius: 50%;
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+header > h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #5e5e5e;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    gap: 20px; /*espaçamento entre as divs*/
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.degrade {
+    background-image: linear-gradient(to right, #FE4701, #FF0054);
+}
+
+.link > button {
+    width: 100%; /*inicialmente não funciona porque tinha o align-items: center*/
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*deixa cada um de um lado*/
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer; /*cursor vira um dedo quando passa por cima*/
+    color: white;
+    transition-duration: .2s;
+}
+
+.link i {
+    font-size: 1.5em;
+}
+
+.link > button:hover, .btn-footer:hover {
+    transform: scale(1.05); /*dá aquela subida quando o cursor passa*/
+}
+
+footer {
+    text-align: center;
+    margin: 30px;
+}
+
+.btn-footer {
+    display: inline-block; /*tem que fazer isso porque links são, naturalmente, do tipo inline level, de modo que propriedades como 'width' e 'height' só funcionam para elementos do tipo bloco*/
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    line-height: 60px; /*como é o mesmo valor da altura e largura, ficam alinhados*/
+    border-radius: 50%;
+    margin: 0px 10px;
+    transition-duration: .2s;
+}
