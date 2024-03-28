@@ -10,8 +10,8 @@
     <div id="container">
         <div id="b1">
             <header>
-                <span><h1>Fylo</h1></span>
                 <i class="bi bi-files"></i>
+                <h1>Fylo</h1>
             </header>
             <main>
                 <a href=""><i class="bi bi-file-earmark-fill"></i></a>
@@ -20,10 +20,25 @@
             </main>
         </div>
         <div id="b2">
+            <header>
+                <p>You've used <strong>815 GB</strong> of your storage</p>
+            </header>
             <main>
-                <p>You've used 815 GB of your storage</p>
-                <input type="range" name="nivel" id="inivel">
+                <div id="ok">
+                    <div id="marker"></div>
+                </div>
+                <div id="notok"></div>
             </main>
+            <footer>
+                <p>0 GB</p>
+                <p>1000 GB</p>
+            </footer>
+        </div>
+        <div id="msg">
+            <header>
+                <h1>185</h1>
+                <p>GB LEFT</p>
+            </header>
         </div>
     </div>
 </body>
