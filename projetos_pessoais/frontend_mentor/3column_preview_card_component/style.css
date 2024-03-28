@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --padrao: 'Barlow Condensed';
+    --padrao2: 'Outfit';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+#container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 0px;
+}
+
+.box {
+    height: 400px;
+    width: 250px;
+    font-family: var(--padrao), Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.233);
+    transition-duration: .2s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.459);
+}
+
+h1 {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+}
+
+.yellow {
+    background-color: #E38525;
+}
+
+.yellow  i {
+    color: #FED870;
+}
+
+.yellow .but {
+    color: #E38525;
+}
+
+.blue {
+    background-color: #016871;
+}
+
+.blue i {
+    color: #27B3C2;
+}
+
+.blue .but {
+    color: #016871;
+}
+
+.green {
+    background-color: #003F3E;
+}
+
+.green i {
+    color: #2AA892;
+}
+
+.green .but {
+    color: #003F3E;
+}
+
+.title {
+    padding: 30px 0px 0px 30px;
+    font-size: 1.5em;
+    font-family: var(--padrao), Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.parag {
+    padding: 30px 10px 0px 30px;
+    font-weight: 100;
+    font-family: var(--padrao2);
+    font-size: 0.8em;
+    line-height: 2em;
+}
+
+.but {
+    border: none;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin: 90px 0px 0px 30px;
+    cursor: pointer;
+    font-family: var(--padrao2);
+}
+
