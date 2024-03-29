@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 768px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #msg {
+        margin-left: 50px;
+        margin-top: -40px;
+    }
+}
