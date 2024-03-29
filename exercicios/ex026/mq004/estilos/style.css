@@ -41,6 +41,7 @@ img {
     margin: auto;
 }
 
+/*#phone {display: none;}*/
 #tablet {display: none;}
 #print {display: none;}
 #pc {display: none;}

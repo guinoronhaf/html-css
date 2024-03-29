@@ -1,3 +1,71 @@
 @charset "UTF-8";
 
 /*Versão para todas as demais mídias*/
+
+@media print {
+    /*não tem sentindo colocar backrground-image na versão de impressora*/
+    #phone {display: none;}
+    #tablet {display: none;}
+    #print {display: block;}
+    #pc {display: none;}
+    #tv {display: none;}
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        border: 2px solid black;
+        width: 90vw;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita por Guilherme Noronha';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url('../imagens/back-tablet.jpg');
+    } /*todas as configurações de backgroun foram feitas na versão Mobile First*/
+
+    #phone {display: none;}
+    #tablet {display: block;}
+    #print {display: none;}
+    #pc {display: none;}
+    #tv {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url('../imagens/back-pc.jpg');
+    }
+
+    #phone {display: none;}
+    #tablet {display: none;}
+    #print {display: none;}
+    #pc {display: block;}
+    #tv {display: none;}
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url('../imagens/back-tv.jpg');
+    }
+
+    main {
+        width: 700px;
+    }
+
+    #phone {display: none;}
+    #tablet {display: none;}
+    #print {display: none;}
+    #pc {display: none;}
+    #tv {display: block;}
+}
