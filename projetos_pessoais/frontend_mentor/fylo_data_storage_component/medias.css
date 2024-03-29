@@ -7,8 +7,24 @@
         align-items: center;
     }
 
+    #b2 {
+        width: 300px;
+    }
+
+    #ok {
+        width: 170px;
+    }
+
+    #notok {
+        width: 80px;
+    }
+
+    #b2 footer {
+        width: 270px;
+    }
+
     #msg {
-        margin-left: 50px;
+        margin-left: 5px;
         margin-top: -40px;
     }
 }
