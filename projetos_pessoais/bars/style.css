@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(49, 47, 47);
+    color: white;
+    height: 100vh;
+    position: relative;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.bar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.box {
+    background-image: linear-gradient(to top, #00fff2, white);
+    width: 15px;
+    border-radius: 20px;
+    animation: up 2s;
+}
+
+@keyframes up {
+    0% {
+        height: 0px;
+    }
+}
+
+.seg {
+    height: 30px;
+}
+
+.ter {
+    height: 60px;
+}
+
+.qua {
+    height: 70px;
+}
+
+.qui {
+    height: 120px;
+}
+
+.sex {
+    height: 55px;
+}
+
+.sab {
+    height: 100px;
+}
+
+.dom {
+    height: 20px;
+}
+
+.line {
+    width: auto;
+    height: 1px;
+    background-color: lightgray;
+    margin-top: -90px;
+}
+
+.days {
+    display: flex;
+    font-size: 0.9em;
+    gap: 33px;
+}
