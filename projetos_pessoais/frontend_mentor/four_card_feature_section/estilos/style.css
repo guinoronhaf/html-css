@@ -17,6 +17,7 @@ body {
     position: relative;
     background-color: hsl(0, 0%, 98%);
     height: 100vh;
+    width: 100vw;
 }
 
 #container {
@@ -41,7 +42,7 @@ header {
 
 header > h1 {
     font-size: 1.5em;
-    width: 90vw;
+    width: 80vw;
 }
 
 .lighter {
@@ -54,7 +55,7 @@ header > h1 {
 
 header > p {
     margin-bottom: 50px;
-    width: 90vw;
+    width: 80vw;
     text-align: center;
 }
 
@@ -63,6 +64,7 @@ header > p {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    padding-bottom: 50px;
 }
 
 .box {
