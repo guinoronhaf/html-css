@@ -62,7 +62,7 @@ header > p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .box {
@@ -93,7 +93,18 @@ header > p {
     margin-top: 30px;
 }
 
-.blue {
+.cyan {
     border-top: 5px solid hsl(180, 62%, 55%);
 }
 
+.red {
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.yellow {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.blue {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
