@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.container {
+    background-color: #ccc;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.item {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 5px;
+    width: 80px;
+}
