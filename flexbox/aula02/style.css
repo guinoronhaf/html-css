@@ -9,6 +9,7 @@
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: stretch;
+    align-content: stretch;
 }
 
 .item {
@@ -16,5 +17,12 @@
     color: #fff;
     padding: 20px;
     margin: 5px;
-    width: 80px;
+    width: 30px;
+    height: 30px;
+
+    flex-basis: 500px;
+}
+
+.article-03 {
+    flex-shrink: 3;
 }
