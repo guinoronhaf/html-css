@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+:root {
+    --headings: 'Poppins';
+    --body: 'Open Sans';
+    --violet: hsl(257, 40%, 49%);
+    --s-magenta: hsl(300, 69%, 71%);
+}
+
+@media (min-width: 992px) {
+    body {
+        background: var(--violet) url('../images/bg-desktop.svg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .img > img {
+        width: 50vw;
+    }
+
+    .text {
+        width: 30vw;
+        text-align: left;
+    }
+
+    .text > h1 {
+        font-size: 2.1em;
+    }
+
+    button {
+        width: 15vw;
+        align-self: flex-start;
+        padding: 15px;
+        font-size: 1.2em;
+        border-radius: 30px;
+    }
+
+    footer {
+        justify-content: end;
+        padding-right: 100px;
+    }
+}
