@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --light_red: hsl(0, 100%, 67%);
+    --orange_yellow: hsl(39, 100%, 56%);
+    --green_teal: hsl(166, 100%, 37%);
+    --cobalt_blue: hsl(234, 85%, 45%);
+    --text: 'Hanken Grotesk';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: white;
+    font-family: var(--text), Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+header {
+    color: hsl(241, 100%, 89%);
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 40px;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+header > #circle {
+    margin: 30px 0px;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+}
+
+#circle > h1 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+header > h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+main > p {
+    text-align: left;
+    color: hsl(224, 30%, 27%);
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+main #sections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.red {
+    background-color: rgba(255, 87, 87, 0.075);
+}
+
+.yellow {
+    background-color: hsla(39, 100%, 56%, 0.075);
+}
+
+.green {
+    background-color: hsla(166, 100%, 37%, 0.075);
+}
+
+.blue {
+    background-color: hsl(234, 85%, 45%, 0.075);
+}
+
+main .symbol {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-weight: 700;
+}
+
+main .red .symbol {
+    color: var(--light_red);
+}
+
+main .yellow .symbol {
+    color: var(--orange_yellow);
+}
+
+main .green .symbol {
+    color: var(--green_teal);
+}
+
+main .blue .symbol {
+    color: var(--cobalt_blue);
+}
+
+main .info {
+    color: hsl(242, 21%, 65%);
+    font-weight: 800;
+}
+
+.info  strong {
+    color: hsl(224, 30%, 27%);
+}
+
+#sections button {
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    width: 90vw;
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
