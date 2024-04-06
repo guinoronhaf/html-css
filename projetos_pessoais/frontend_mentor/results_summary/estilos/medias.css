@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@media (min-width: 992px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+    }
+
+    header, main {
+        height: 450px;
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    header {
+        padding: 10px 40px;
+    }
+
+    header > #circle {
+        height: 200px;
+        width: 200px;
+    }
+
+    main {
+        box-shadow: 0px 5px 25px grey;
+    }
+
+    main > p {
+        padding-top: 5px;
+    }
+
+    button {
+        width: 20vw;
+        padding: 15px;
+    }
+
+}
