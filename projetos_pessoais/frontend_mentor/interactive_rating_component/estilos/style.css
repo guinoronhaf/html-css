@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --light_grey: hsl(217, 12%, 63%);
+    --medium_grey: hsl(216, 12%, 54%);
+    --dark_blue: hsl(213, 19%, 18%);
+    --very_dark_blue: hsl(216, 12%, 8%);
+    --texto: 'Overpass';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: var(--texto), Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: var(--very_dark_blue);
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    background-color: var(--dark_blue);
+    width: 90vw;
+    text-align: left;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    width: 40px;
+    height: 40px;
+    background-color: hsla(210, 3%, 31%, 0.336);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main > p {
+    color: var(--light_grey);
+}
+
+#botoes {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.box {
+    height: 40px;
+    width: 40px;
+    background-color: hsla(210, 3%, 31%, 0.336);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light_grey);
+    transition-duration: .2s;
+}
+
+.box:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+footer {
+    text-align: center;
+}
+
+footer > button {
+    background-color: var(--orange);
+    color: white;
+    width: 70vw;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: 2.5px;
+}
