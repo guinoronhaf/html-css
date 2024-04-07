@@ -84,7 +84,12 @@ main .box {
     justify-content: space-between;
     padding: 15px;
     border-radius: 10px;
+    box-sizing: border-box;
+    transition-duration: .3s;
+}
 
+.box:hover {
+    transform: scaleX(1.02);   
 }
 
 .red {
@@ -145,4 +150,10 @@ button {
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     cursor: pointer;
+    transition-duration: .3s;
+}
+
+button:hover {
+    background-color: hsl(241, 81%, 54%);
+    transform: scale(1.05);
 }
