@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@media (min-width: 768px) {
+    main {
+        width: 350px;
+    }
+}

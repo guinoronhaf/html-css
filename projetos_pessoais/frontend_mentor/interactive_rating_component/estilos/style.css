@@ -47,8 +47,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
@@ -75,8 +75,8 @@ ul > li {
 li > button {
     color: white;
     background-color: var(--circles);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border: none;
     border-radius: 50%;
     transition-duration: .2s;
