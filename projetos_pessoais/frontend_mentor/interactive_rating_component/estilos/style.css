@@ -8,6 +8,7 @@
     --medium_grey: hsl(216, 12%, 54%);
     --dark_blue: hsl(213, 19%, 18%);
     --very_dark_blue: hsl(216, 12%, 8%);
+    --circles: hsla(210, 3%, 31%, 0.336);
     --texto: 'Overpass';
 }
 
@@ -21,78 +22,109 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
-    font-family: var(--texto), Arial, Helvetica, sans-serif;
-    color: white;
-    background-color: var(--very_dark_blue);
-    width: 100vw;
+    font: 16px var(--texto);
     height: 100vh;
-}
-
-#container {
-    background-color: var(--dark_blue);
-    width: 90vw;
-    text-align: left;
-    padding: 30px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-header {
-    width: 40px;
-    height: 40px;
-    background-color: hsla(210, 3%, 31%, 0.336);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    width: 100vw;
+    background-color: var(--very_dark_blue);
+    color: white;
 }
 
 main {
+    background-color: var(--dark_blue);
+    width: 90vw;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-main > p {
-    color: var(--light_grey);
-}
-
-#botoes {
-    display: flex;
-    justify-content: space-around;
     gap: 20px;
 }
 
-.box {
-    height: 40px;
-    width: 40px;
-    background-color: hsla(210, 3%, 31%, 0.336);
-    border-radius: 50%;
+#form > .star {
+    background-color: var(--circles);
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: var(--light_grey);
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#form > h1 {
+    font-size: 1.8em;
+}
+
+#form > p {
+    color: var(--medium_grey);
+    font-size: 0.9em;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+li > button {
+    color: white;
+    background-color: var(--circles);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
     transition-duration: .2s;
 }
 
-.box:hover {
-    background-color: var(--orange);
+li > button:hover {
     color: white;
+    background-color: var(--orange);
 }
 
-footer {
-    text-align: center;
+li > button:focus { /*é essa pseudo-classe que faz com que, ainda que rapidamente, o botão mude de cor ao clicar (foco).*/
+    color: white;
+    background-color: var(--medium_grey);
 }
 
-footer > button {
-    background-color: var(--orange);
-    color: white;
-    width: 70vw;
-    padding: 10px;
+#submit {
     border: none;
+    color: white;
+    background-color: var(--orange);
+    padding: 15px;
     border-radius: 20px;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
+    transition-duration: .2s;
+}
+
+#submit:hover {
+    color: var(--orange);
+    background-color: white;
+}
+
+/*-=-=-=-=-=-=-=-=-=--=--=-=-=-=-=-=*/
+
+#feedback {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#feedback > .submit-message {
+    color: var(--orange);
+    background-color: var(--circles);
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#feedback > p {
+    color: var(--light_grey);
 }
