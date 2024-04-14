@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --linear1: hsl(236, 72%, 79%);
+    --linear2: hsl(237, 63%, 64%);
+    --very_light_grayish_blue: hsl(240, 78%, 98%);
+    --light_grayish_blue: hsl(234, 14%, 74%);
+    --grayish_blue: hsl(233, 13%, 49%);
+    --dark_grayish_blue: hsl(232, 13%, 33%);
+    --text: 'Montserrat'
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: 15px;
+    font-family: var(--text);
+    font-weight: 700;
+    height: 100vh;
+    width: 100vw;
+    background: var(--very_light_grayish_blue) url('images/bg-top.svg') no-repeat;
+    background-size: cover;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+header > h1 {
+    color: var(--grayish_blue);
+}
+
+header > section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--light_grayish_blue);
+}
+
+header .bigger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--linear1), var(--linear2));
+    width: 50px;
+    height: 15px;
+    padding: 15px 5px;
+    border-radius: 20px;
+    
+}
+
+header .bigger .circle {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .box {
+    width: 90vw;
+    height: 420px; /*isso resolveu o problema dos botões mexendo no "hover"*/
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+main .box span {
+    font-size: 2rem;
+}
+
+main .box > h1 {
+    font-size: 3rem;
+}
+
+main .box .btn {
+    padding: 15px;
+    border-radius: 5px;
+    font-family: var(--text);
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.w {
+    color: white;
+    background-image: linear-gradient(to right, var(--linear1), var(--linear2));
+    border: none;
+}
+
+.w:hover {
+    border: 1px solid var(--linear2);
+    background-image: none;
+    background-color: white;
+    color: var(--linear2);
+}
+
+.b {
+    background-color: white;
+    color: var(--linear2);
+    border: none;
+}
+
+.b:hover {
+    border: 1px solid white;
+    background-color: var(--linear2);
+    color: white;
+}
+
+main .white {
+    background-color: white;
+    color: var(--grayish_blue);
+}
+
+main .white > h1 {
+    color: var(--dark_grayish_blue);
+}
+
+main .blue {
+    background-image: linear-gradient(to bottom, var(--linear1), var(--linear2));
+    color: var(--very_light_grayish_blue);
+}
+
+main .blue > h1 {
+    color: white;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+@media (min-width: 992px) {
+    #container {
+        gap: 80px;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        justify-content: last baseline;
+    }
+
+    main .box {
+        width: 300px;
+        height: 440px;
+    }
+
+    main .box h1 {
+        font-size: 4rem;
+    }
+
+    main .blue {
+        
+    }
+    
+}
