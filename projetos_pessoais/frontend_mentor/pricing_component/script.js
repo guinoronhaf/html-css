@@ -6,6 +6,7 @@ let third = document.querySelector('.third')
 let anually = document.querySelector('.anually')
 let monthly = document.querySelector('.monthly')
 
+monthly.style.color = 'hsl(237, 63%, 64%)'
 
 function clicked() {
     if (bigger.style.justifyContent != 'flex-start') {
