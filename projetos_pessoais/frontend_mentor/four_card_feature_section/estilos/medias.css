@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-@media (min-width: 768px) and (max-width: 992px) {
+/*@media (min-width: 768px) and (max-width: 992px) {
     .box {
         width: 50vw;
     }
-}
+}*/
 
-@media (min-width: 992px) and (max-width:1400px) {
+@media (min-width: 890px) {
     #container {
         padding-top: 20px;
     }
