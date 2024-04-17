@@ -45,7 +45,7 @@ main #form {
     justify-content: space-around;
 }
 
-main #form .info p {
+main #form .info .title {
     font-size: 0.35em;
     font-weight: 700;
     color: var(--smoke_grey);
@@ -85,6 +85,12 @@ main #img .circle {
     height: 70px;
     border-radius: 50%;
     cursor: pointer;
+    transition-duration: .2s;
+}
+
+main #img .circle:hover {
+    cursor: pointer;
+    background-color: black;
 }
 
 main #img .circle img {
@@ -99,6 +105,11 @@ main #time {
 
 main #time .results span {
     color: var(--purple);
+}
+
+#dayError, #monthError, #yearError {
+    font-size: 0.4em;
+    font-style: italic;
 }
 
 /*-=-=-=-====-=-=-=-=-=-=--==-=-=-=-=-=-*/

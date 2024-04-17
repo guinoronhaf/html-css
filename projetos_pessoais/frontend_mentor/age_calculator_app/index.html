@@ -11,16 +11,19 @@
     <main>
         <form id="form">
             <div class="info">
-                <p>DAY</p>
-                <input type="number" name="day" id="iday" placeholder="DD">
+                <p id="dayText" class="title">DAY</p>
+                <input type="number" name="day" id="iday" placeholder="DD"> <br>
+                <p id="dayError"></p>
             </div>
             <div class="info">
-                <p>MONTH</p>
-                <input type="number" name="month" id="imonth" placeholder="MM">
+                <p id="monthText" class="title">MONTH</p>
+                <input type="number" name="month" id="imonth" placeholder="MM"> <br>
+                <p id="monthError"></p>
             </div>
             <div class="info">
-                <p>YEAR</p>
+                <p id="yearText" class="title">YEAR</p>
                 <input type="number" name="year" id="iyear" placeholder="YYYY">
+                <p id="yearError"></p>
             </div>
         </form>
         <section id="img">
@@ -42,6 +45,6 @@
         </section>
     </main>
     
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
