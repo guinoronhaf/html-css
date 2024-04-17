@@ -138,6 +138,11 @@ input:focus {
     color: #00474C;
 }
 
+#buttons .btn:focus {
+    background-color: var(--strong_cyan);
+    color: #00474C;
+}
+
 #buttons .custom {
     background-color: var(--very_light_grayish_cyan);
     color: var(--grayish_cyan);
@@ -174,6 +179,12 @@ strong {
     color: white;
 }
 
+#results #informations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 #results .money {
     display: flex;
     color: var(--strong_cyan);
@@ -192,6 +203,15 @@ strong {
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
+    transition-duration: .2s;
+}
+
+#results input:hover {
+    background-color: var(--very_light_grayish_cyan);
+}
+
+.wrong {
+    border: 1px solid rgba(255, 0, 0, 0.61);
 }
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-*/
@@ -220,6 +240,11 @@ strong {
     }
 
     #results {
+        justify-content: space-between;
         width: 50%;
+    }
+
+    #results #informations {
+        gap: 50px;
     }
 }

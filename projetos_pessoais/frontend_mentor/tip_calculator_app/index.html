@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frontend Mentor | Tip Calculator App</title>
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,45 +17,49 @@
             <section id="infos">
                 <div id="bill">
                     <p class="title">Bill</p>
-                    <div class="values">
+                    <div class="values bill_values">
                         <label for="ibill"><img src="images/icon-dollar.svg" alt="Icon Dollar"></label>
-                        <input class="b" type="number" name="bill" id="ibill">
+                        <input class="b" type="number" name="bill" id="ibill" value="100.00" oninput="billv()">
                     </div>
                 </div>
                 <div id="tip">
                     <p class="title">Select Tip %</p>
                     <div id="buttons">
-                        <button class="btn">5%</button>
-                        <button class="btn">10%</button>
-                        <button class="btn">15%</button>
-                        <button class="btn">25%</button>
-                        <button class="btn">50%</button>
-                        <input class="btn custom" type="number" placeholder="Custom">
+                        <button class="btn" value="5">5%</button>
+                        <button class="btn" value="10">10%</button>
+                        <button class="btn" value="15">15%</button>
+                        <button class="btn" value="25">25%</button>
+                        <button class="btn" value="50">50%</button>
+                        <input id="custom" class="btn custom" type="number" placeholder="Custom" oninput="customv()">
                     </div>
                 </div>
                 <div id="people">
                     <p class="title">Number of People</p>
-                    <div class="values">
+                    <div class="values people_values">
                         <label for="ipeople"><img src="images/icon-person.svg" alt="Icon Person"></label>
-                        <input class="p" type="number" name="people" id="ipeople">
+                        <input class="p" type="number" name="people" id="ipeople" value="1" oninput="peoplev()">
                     </div>
                 </div>
             </section>
             <section id="results">
-                <div class="amount">
-                    <p><strong>Tip Amount</strong><br>/ person</p>
-                    <div class="money">
-                        <span>$</span>
-                        <span>0.00</span>
+                <div id="informations">
+                    <div class="amount">
+                        <p><strong>Tip Amount</strong><br>/ person</p>
+                        <div class="money">
+                            <span>$</span>
+                            <span id="val1">0.00</span>
+                        </div>
+                    </div>
+                    <div class="amount">                      <p><strong>Total</strong><br>/ person</p>
+                        <div class="money">
+                            <span>$</span>
+                            <span id="val2">0.00</span>
+                        </div>
                     </div>
                 </div>
-                <div class="amount">                      <p><strong>Total</strong><br>/ person</p>
-                    <div class="money">
-                        <span>$</span>
-                        <span>0.00</span>
-                    </div>
+                <div id="reseting">
+                    <input id="reset" type="reset" value="RESET">
                 </div>
-                <input type="reset" value="RESET">
             </section>
         </form>
     </div>
