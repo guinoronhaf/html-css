@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        <header>
+            <img src="images/logo.svg" alt="Logo Splitter">
+        </header>
+        <form>
+            <section id="infos">
+                <div id="bill">
+                    <p class="title">Bill</p>
+                    <div class="values">
+                        <label for="ibill"><img src="images/icon-dollar.svg" alt="Icon Dollar"></label>
+                        <input class="b" type="number" name="bill" id="ibill">
+                    </div>
+                </div>
+                <div id="tip">
+                    <p class="title">Select Tip %</p>
+                    <div id="buttons">
+                        <button class="btn">5%</button>
+                        <button class="btn">10%</button>
+                        <button class="btn">15%</button>
+                        <button class="btn">25%</button>
+                        <button class="btn">50%</button>
+                        <input class="btn custom" type="number" placeholder="Custom">
+                    </div>
+                </div>
+                <div id="people">
+                    <p class="title">Number of People</p>
+                    <div class="values">
+                        <label for="ipeople"><img src="images/icon-person.svg" alt="Icon Person"></label>
+                        <input class="p" type="number" name="people" id="ipeople">
+                    </div>
+                </div>
+            </section>
+            <section id="results">
+                <div class="amount">
+                    <p><strong>Tip Amount</strong><br>/ person</p>
+                    <div class="money">
+                        <span>$</span>
+                        <span>0.00</span>
+                    </div>
+                </div>
+                <div class="amount">                      <p><strong>Total</strong><br>/ person</p>
+                    <div class="money">
+                        <span>$</span>
+                        <span>0.00</span>
+                    </div>
+                </div>
+                <input type="reset" value="RESET">
+            </section>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

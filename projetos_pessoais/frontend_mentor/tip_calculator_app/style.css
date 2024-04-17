@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --strong_cyan: hsl(172, 67%, 45%);
+    --very_dark_cyan: hsl(186, 14%, 43%);
+    --grayish_cyan: hsl(184, 14%, 56%);
+    --light_grayish_cyan: hsl(185, 41%, 84%);
+    --very_light_grayish_cyan: hsl(189, 41%, 97%);
+    --dark_green: #00474C;
+    --text: 'Space Mono';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--light_grayish_cyan);
+    font-family: var(--text), Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    width: 100vw;
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+form > #infos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#infos > #bill {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    color: var(--very_dark_cyan);
+}
+
+input:focus {
+    outline: none;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very_light_grayish_cyan);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.values > input {
+    border: none;
+    background-color: var(--very_light_grayish_cyan);
+    font-size: 24px;
+    font-family: var(--text);
+    color: #00474C;
+    font-weight: 700;
+}
+
+.b {
+    width: 40%;
+}
+
+.p {
+    width: 20%;
+}
+
+.values > nput:focus {
+    outline: none;
+}
+
+#people {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#tip {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#tip #buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: repeat(auto-fill, 50px);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#buttons .btn {
+    width: 150px;
+    height: 50px;
+    background-color: #00474C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: var(--text), Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+#buttons .btn:hover{
+    background-color: var(--strong_cyan);
+    color: #00474C;
+}
+
+#buttons .custom {
+    background-color: var(--very_light_grayish_cyan);
+    color: var(--grayish_cyan);
+    text-align: end;
+}
+
+#buttons .custom:hover {
+    background-color: var(--light_grayish_cyan);
+}
+
+#buttons .custom:focus {
+    outline: none;
+    border: 1px solid var(--dark_green);
+}
+
+form #results {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #00474C;
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+
+#results .amount {
+    display: flex;
+    justify-content: space-between;
+    color: var(--grayish_cyan);
+    font-size: 0.8em;
+}
+
+strong {
+    font-size: 1.2em;
+    color: white;
+}
+
+#results .money {
+    display: flex;
+    color: var(--strong_cyan);
+    font-size: 2.5em;
+}
+
+#results input {
+    background-color: var(--strong_cyan);
+    color: #00474C;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: var(--text), Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-*/
+
+@media (min-width: 992px) {
+
+    #container {
+        padding-top: 80px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 65vw;
+        border-radius: 20px;
+        gap: 10px;
+    }
+
+    #tip #buttons {
+        grid-template-columns: repeat(auto-fill, 100px);
+    }
+
+    #buttons .btn {
+        width: 100px;
+    }
+
+    #results {
+        width: 50%;
+    }
+}
