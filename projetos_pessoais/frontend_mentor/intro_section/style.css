@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+/* 500, 700, 18px */
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --almost_white: hsl(0, 0%, 98%);
+    --medium_gray: hsl(0, 0%, 41%);
+    --almost_black: hsl(0, 0%, 8%);
+    --text: 'Epilogue';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    width: 100vw;
+    font-size: 18px;
+    font-family: var(--text);
+    background-color: var(--almost_white);
+}
+
+#container {
+    display: flex;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+}
+
+#info header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 30px 20px;
+}
+
+#info_infos {
+    display: none;
+}
+
+header #hamb {
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main #main_hero {
+    background-image: url('images/image-hero-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 100vw;
+    height: 40vh;
+}
+
+main #main_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+#main_info h1 {
+    font-size: 2rem;
+}
+
+#main_info p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 80%;
+    color: var(--medium_gray);
+    line-height: 25px;
+}
+
+#main_info button {
+    color: var(--almost_white);
+    background-color: var(--almost_black);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-family: var(--text);
+    font-weight: 700;
+}
+
+#main_info #main_brands {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#main_info #main_brands img {
+    width: 50px;
+    height: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav > nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: end;
+    padding: 25px 25px 0px 25px;
+    background-color: white;
+    text-align: left;
+    width: 60%;
+    height: 100vh;
+    color: var(--medium_gray);
+    font-weight: 500;
+}
+
+nav #exit {
+    align-self: flex-end;
+    width: 15%;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+nav .nav_arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+nav .nav_arrows img {
+    width: 15px;
+    height: 10px;
+}
+
+nav #login_register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 20px;
+}
+
+nav #login_register .register {
+    border: 1px solid var(--almost_black);
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    transition-duration: .3s;
+}
+
+nav #login_register .register:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+}
+
+nav ul li img {
+    width: 20px;
+}
+
+.disappear {
+    display: none;
+}
+
+.opac {
+    filter: opacity(50%);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    text-decoration: underline;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=--=-= */
+
+@media(min-width:992px) {
+    #info header {
+       padding: 30px 0px 100px 50px;
+    }
+
+    #info_infos {
+        display: flex;
+    }
+
+    #info_menu {
+        display: flex;
+    }
+
+    #hamb {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0px;
+        padding: 0px 150px;
+    }
+
+    main #main_hero {
+        background-image: url('images/image-hero-desktop.png');
+        width: 50vw;
+        background-size: contain;
+        height: 70vh;
+    }
+
+    main #main_info {
+        display: flex;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    main #main_info h1 {
+        font-size: 4rem;
+        width: 100%;
+    }
+
+    main #main_info p {
+        font-size: 1rem;
+    }
+
+    main #main_info button {
+        margin-bottom: 50px;
+    }
+
+    #main_info #main_brands img {
+        width: 50%;
+        height: 60%;
+    }
+}
