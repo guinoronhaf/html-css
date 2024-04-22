@@ -103,6 +103,8 @@ form #infos {
 
 #infos-tip #infos-tip-btn {
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(2, 150px);
     gap: 20px;
 }
