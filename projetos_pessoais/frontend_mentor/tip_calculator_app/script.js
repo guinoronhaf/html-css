@@ -7,15 +7,19 @@ const val1 = document.querySelector('#val1')
 const val2 = document.querySelector('#val2')
 const reset = document.querySelector('#reset')
 const custom = document.querySelector('#f_tip')
+let billFlag = false
+let peopleFlag = false
 custom.setAttribute('placeholder', 'Custom')
 
 fBill.addEventListener("input",() => {
     if (fBill.value <= 0) {
         fBill.parentNode.classList.add('wrong')
         error[0].classList.remove('disappear')
+        billFlag = false
     } else {
         fBill.parentNode.classList.remove('wrong')
         error[0].classList.add('disappear')
+        billFlag = true
     }
 }) 
 
@@ -23,9 +27,11 @@ fPeople.addEventListener("input",() => {
     if (fPeople.value <= 0) {
         fPeople.parentNode.classList.add('wrong')
         error[1].classList.remove('disappear')
+        peopleFlag = false
     } else {
         fPeople.parentNode.classList.remove('wrong')
         error[1].classList.add('disappear')
+        peopleFlag = true
     }
 })
 
@@ -44,7 +50,8 @@ infosTipBtn.map((el) => {
             e.preventDefault()
             custom.value = 'Custom'
             let t = el.value
-            if (fBill.value > 0 && fPeople > 0) {
+            if (billFlag && peopleFlag) {
+                let t = el.value
                 let finalValue1 = (fBill.value * t/100)/fPeople.value
                 val1.innerHTML = `$${finalValue1.toFixed(2)}`
                 let finalValue2 = (fBill.value/fPeople.value) + finalValue1
@@ -56,7 +63,8 @@ infosTipBtn.map((el) => {
     } else {
         el.addEventListener("input", () => {
             let t = el.value 
-            if (fBill.value > 0 && fPeople.value > 0) {
+            if (billFlag && peopleFlag) {
+                let t = el.value
                 let finalValue1 = (fBill.value * t/100)/fPeople.value
                 val1.innerHTML = `$${finalValue1.toFixed(2)}`
                 let finalValue2 = (fBill.value/fPeople.value) + finalValue1
