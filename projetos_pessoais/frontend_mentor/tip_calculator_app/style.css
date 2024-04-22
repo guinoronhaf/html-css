@@ -13,17 +13,18 @@
 }
 
 * {
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
 body, html {
     height: 100vh;
     width: 100vw;
-    background-color: var(--light_grayish_cyan);
-    font-family: var(--text), Arial, Helvetica, sans-serif;
+    font-size: 24px;
     font-weight: 700;
+    font-family: var(--text);
+    background-color: var(--light_grayish_cyan);
 }
 
 #container {
@@ -32,7 +33,8 @@ body, html {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding-top: 30px;
+    width: 100%;
+    padding-top: 50px;
 }
 
 form {
@@ -40,211 +42,168 @@ form {
     flex-direction: column;
     gap: 20px;
     background-color: white;
-    width: 100vw;
-    height: 100%;
     padding: 30px;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
 }
 
-form > #infos {
+/* #infos */
+
+form #infos {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#infos > #bill {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.title {
-    color: var(--very_dark_cyan);
-}
-
-input:focus {
-    outline: none;
-}
-
-.values {
+#infos .title {
     display: flex;
     justify-content: space-between;
+    color: var(--very_dark_cyan);
+    font-size: 0.6rem;
+    margin-bottom: 20px;
+}
+
+#infos .title .error {
+    color: red;
+}
+
+.infos-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    height: 60px;
     background-color: var(--very_light_grayish_cyan);
-    padding: 10px 20px;
     border-radius: 5px;
 }
 
-.values > input {
-    border: none;
-    background-color: var(--very_light_grayish_cyan);
-    font-size: 24px;
-    font-family: var(--text);
-    color: #00474C;
-    font-weight: 700;
-}
-
-.b {
+#infos-bill input {
     width: 40%;
 }
 
-.p {
-    width: 20%;
+.infos-input input {
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--text);
+    color: var(--dark_green);
+    background-color: var(--very_light_grayish_cyan);
 }
 
-.values > nput:focus {
+.infos-input input:focus {
     outline: none;
 }
 
-#people {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+#infos-people input {
+    width: 20%;
 }
 
-#tip {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#tip #buttons {
+#infos-tip #infos-tip-btn {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 150px);
-    grid-template-rows: repeat(auto-fill, 50px);
+    grid-template-columns: repeat(2, 150px);
     gap: 20px;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    width: 100%;
 }
 
-#buttons .btn {
+#infos-tip #infos-tip-btn button {
     width: 150px;
     height: 50px;
-    background-color: #00474C;
+    background-color: var(--dark_green);
     color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--text);
     border: none;
     border-radius: 5px;
-    font-size: 24px;
-    font-family: var(--text), Arial, Helvetica, sans-serif;
-    font-weight: 700;
     cursor: pointer;
     transition-duration: .2s;
 }
 
-#buttons .btn:hover{
-    background-color: var(--strong_cyan);
-    color: #00474C;
-}
-
-#buttons .btn:focus {
-    background-color: var(--strong_cyan);
-    color: #00474C;
-}
-
-#buttons .custom {
+#infos-tip-btn > input {
     background-color: var(--very_light_grayish_cyan);
-    color: var(--grayish_cyan);
+    width: 150px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--text);
     text-align: end;
+    border: none;
+    border-radius: 5px;
+    color: var(--dark_green);
 }
 
-#buttons .custom:hover {
+#infos-tip #infos-tip-btn button:hover {
+    background-color: var(--strong_cyan);
+}
+
+#infos-tip-btn > input:hover {
     background-color: var(--light_grayish_cyan);
 }
 
-#buttons .custom:focus {
-    outline: none;
-    border: 1px solid var(--dark_green);
+#infos-tip #infos-tip-btn button:focus {
+    background-color: var(--strong_cyan);
 }
 
-form #results {
+#infos-tip #infos-tip-btn input:focus {
+    background-color: var(--light_grayish_cyan);
+    outline: none;
+}
+
+#results {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: #00474C;
+    color: white;
+    background-color: var(--dark_green);
     padding: 30px 20px;
     border-radius: 20px;
 }
 
-#results .amount {
+#results .results-value {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.results-value > p {
+    font-size: 0.8rem;
+}
+
+.results-value span {
+    font-size: 0.7rem;
     color: var(--grayish_cyan);
-    font-size: 0.8em;
 }
 
-strong {
-    font-size: 1.2em;
-    color: white;
-}
-
-#results #informations {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#results .money {
-    display: flex;
+.results-value > h1 {
     color: var(--strong_cyan);
-    font-size: 2.5em;
 }
 
 #results input {
     background-color: var(--strong_cyan);
-    color: #00474C;
-    width: 100%;
+    color: var(--dark_green);
+    font-size: 1rem;
+    font-family: var(--text);
+    font-weight: 700;
+    padding: 5px;
     border: none;
     border-radius: 5px;
-    padding: 10px;
-    font-family: var(--text), Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
     cursor: pointer;
-    transition-duration: .2s;
+    transition-duration: .3s;
 }
 
 #results input:hover {
-    background-color: var(--very_light_grayish_cyan);
+    background-color: white;
+}
+
+.disappear {
+    display: none;
 }
 
 .wrong {
-    border: 1px solid rgba(255, 0, 0, 0.61);
+    border: 1px solid red;
 }
 
-/*-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-*/
-
-@media (min-width: 992px) {
-
-    #container {
-        padding-top: 80px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 65vw;
-        border-radius: 20px;
-        gap: 10px;
-    }
-
-    #tip #buttons {
-        grid-template-columns: repeat(auto-fill, 100px);
-    }
-
-    #buttons .btn {
-        width: 100px;
-    }
-
-    #results {
-        justify-content: space-between;
-        width: 50%;
-    }
-
-    #results #informations {
-        gap: 50px;
-    }
+.typing {
+    border: 1px solid var(--strong_cyan);
 }

@@ -87,3 +87,16 @@ padding: 20px;
     font-size: 4em;
     border: 1px solid black;
 }
+
+.wrong {
+    border: 1px solid red;
+}
+
+.wrong::placeholder {
+    content: "Can't be zero";
+    color: red;
+}
+
+#f_people:focus {
+    outline: none;
+}
