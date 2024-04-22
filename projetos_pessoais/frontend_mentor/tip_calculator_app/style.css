@@ -47,12 +47,14 @@ form {
     width: 100%;
 }
 
-/* #infos */
-
 form #infos {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+input {
+    text-align: right;
 }
 
 #infos .title {
@@ -105,7 +107,8 @@ form #infos {
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 50px 50px 50px;
     gap: 20px;
 }
 
@@ -179,6 +182,7 @@ form #infos {
 }
 
 .results-value > h1 {
+    font-size: 2rem;
     color: var(--strong_cyan);
 }
 
@@ -188,6 +192,7 @@ form #infos {
     font-size: 1rem;
     font-family: var(--text);
     font-weight: 700;
+    text-align: center;
     padding: 5px;
     border: none;
     border-radius: 5px;
@@ -209,4 +214,41 @@ form #infos {
 
 .typing {
     border: 1px solid var(--strong_cyan);
+}
+
+/* -=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=- */
+
+@media (min-width: 992px) {
+    
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 70vw;
+        height: 450px;
+        gap: 30px;
+        border-radius: 20px;
+    }
+
+    #infos {
+        width: 50%;
+    }
+
+    #infos-tip #infos-tip-btn {
+        grid-template-columns: 120px 120px 120px;
+        grid-template-rows: 50px 50px;
+        gap: 10px;
+    }
+
+    #infos-tip #infos-tip-btn .btn {
+        width: 120px;
+    }
+
+    #results {
+        width: 50%;
+    }
+
+    #results input {
+        margin-top: 80px;
+    }
 }
