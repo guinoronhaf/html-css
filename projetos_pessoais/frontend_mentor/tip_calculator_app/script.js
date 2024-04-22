@@ -62,7 +62,6 @@ infosTipBtn.map((el) => {
         })
     } else {
         el.addEventListener("input", () => {
-            let t = el.value 
             if (billFlag && peopleFlag) {
                 let t = el.value
                 let finalValue1 = (fBill.value * t/100)/fPeople.value
