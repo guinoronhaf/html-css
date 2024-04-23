@@ -220,11 +220,19 @@ input {
 
 @media (min-width: 992px) {
     
+    body, html {
+        overflow: hidden;
+    }
+
+    #container {
+        margin-top: 30px;
+    }
+
     form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 70vw;
+        width: 60vw;
         height: 450px;
         gap: 30px;
         border-radius: 20px;
