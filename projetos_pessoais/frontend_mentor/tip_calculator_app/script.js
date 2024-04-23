@@ -85,5 +85,7 @@ reset.addEventListener("click", () => {
     })
     val1.textContent = '$0.00'
     val2.textContent = '$0.00'
+    billFlag = false
+    peopleFlag = false
     custom.value = 'Custom'
 })
