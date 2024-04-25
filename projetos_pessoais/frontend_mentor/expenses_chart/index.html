@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Expenses Chart Component</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header id="balance">
+            <div id="balance_value">
+                <p>My balance</p>
+                <h1>$921.48</h1>
+            </div>
+            <div id="balance_circles">
+                <img src="images/logo.svg" alt="Logo">
+            </div>
+        </header>
+        <main id="results">
+            <h1 id="results_title">Spending - Last 7 days</h1>
+            <div id="results_data">
+                <div class="data">
+                    <div class="box disappear">$17.45</div>
+                    <div class="bar mon" data-day="1"></div>
+                    <div class="day">mon</div>
+                </div>
+                <div class="data">
+                    <div class="box disappear">$34.91</div>
+                    <div class="bar tue" data-day="2"></div>
+                    <div class="day">tue</div>
+                </div>
+                <div class="data">
+                    <div class="box disappear">$52.36</div>
+                    <div class="bar wed" data-day="3"></div>
+                    <div class="day">wed</div>
+                </div>
+                <div class="data">
+                    <div class="box disappear">$31.07</div>
+                    <div class="bar thu" data-day="4"></div>
+                    <div class="day">thu</div>
+                </div>
+                <div class="data">
+                    <div class="box disappear">$23.39</div>
+                    <div class="bar fri" data-day="5"></div>
+                    <div class="day" on>fri</div>
+                </div>
+                <div class="data">
+                    <div class="box disappear">$43.28</div>
+                    <div class="bar sat" data-day="6"></div>
+                    <div class="day">sat</div>
+                </div>
+                <div class="data">
+                    <div class="box disappear">$25.48</div>
+                    <div class="bar sun" data-day="0"></div>
+                    <div class="day">sun</div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div id="info">
+                <div id="info_total">
+                    <p>Total this month</p>
+                    <h1>$478.33</h1>
+                </div>
+                <div id="info_last">
+                    <p class="strong">+2.4%</p>
+                    <p>from last month</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
