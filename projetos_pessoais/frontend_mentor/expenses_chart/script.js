@@ -3,8 +3,6 @@ const bar = [...document.querySelectorAll('.bar')]
 let now = new Date()
 let nowDay = now.getDay()
 
-// bar[2].classList.add('sele')
-
 bar.map((el, pos) => {
     el.addEventListener("mouseenter", () => {
         if (el.dataset.day== nowDay) {
