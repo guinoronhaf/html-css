@@ -113,6 +113,7 @@ body, html {
     font-size: 1rem;
     font-weight: 700;
     background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
     border: none;
     border-bottom: 4px solid hsl(28, 16%, 65%);
 }
