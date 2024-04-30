@@ -19,6 +19,9 @@ body, html {
     font-family: var(--text);
     font-size: 32px;
     font-weight: 700;
+}
+
+.body_theme1 {
     background-color: hsl(222, 26%, 31%);
 }
 
@@ -33,8 +36,11 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    color: white;
     font-size: 0.5rem;
+}
+
+.theme_keys_theme1 {
+    color: white;
 }
 
 #theme_keys > #theme_keys_options {
@@ -66,19 +72,25 @@ body, html {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: hsl(223, 31%, 20%);
     width: 70px;
     height: 25px;
     border-radius: 40px;
     padding: 5px;
 }
 
-#theme_keys > #theme_keys_options > #theme_keys_options_choices > #choices > .slider {
+.choices_theme1 {
+    background-color: hsl(223, 31%, 20%);
+}
+
+#theme_keys > #theme_keys_options > #theme_keys_options_choices > #choices > #slider {
     position: absolute;
     height: 15px;
     width: 15px;
-    background-color: hsl(6, 63%, 50%);
     border-radius: 50%;
+}
+
+.slider_theme1 {
+    background-color: hsl(6, 63%, 50%);
 }
 
 #display {
@@ -87,11 +99,14 @@ body, html {
     justify-content: end;
     width: 100%;
     height: 100px;
-    background-color: hsl(224, 36%, 15%);
     padding: 20px 30px;
     font-size: 1.5rem;
-    color: white;
     border-radius: 10px;
+}
+
+.display_theme1 {
+    background-color: hsl(224, 36%, 15%);
+    color: white;
 }
 
 #keyboard {
@@ -100,21 +115,30 @@ body, html {
     justify-content: center;
     gap: 8px;
     padding: 30px;
-    background-color: hsl(223, 31%, 20%);
     border-radius: 10px;
     width: 100%;
 }
 
+.keyboard_theme1 {
+    background-color: hsl(223, 31%, 20%);
+}
+
 .key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 15vw;
     height: 15vw;
     border-radius: 5px;
     font-family: var(--text);
     font-size: 1rem;
     font-weight: 700;
+    border: none;
+}
+
+.key_theme1 {
     background-color: hsl(30, 25%, 89%);
     color: hsl(221, 14%, 31%);
-    border: none;
     border-bottom: 4px solid hsl(28, 16%, 65%);
 }
 
@@ -123,15 +147,145 @@ body, html {
 }
 
 #kdel, #kreset {
-    background-color: hsl(225, 21%, 49%);
-    border-bottom: 4px solid hsl(224, 28%, 35%);
-    color: white;
     font-size: 0.7rem;
 }
 
+.rd_theme1 {
+    background-color: hsl(225, 21%, 49%);
+    border-bottom: 4px solid hsl(224, 28%, 35%);
+    color: white;
+}
+
 #kequal {
+    font-size: 0.7rem;
+}
+
+.equal_theme1 {
     background-color: hsl(6, 63%, 50%);
     border-bottom: 4px solid hsl(6, 70%, 34%);
     color: white;
-    font-size: 0.7rem;
+}
+
+/* THEME2 */
+
+.body_theme2 {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.theme_keys_theme2 {
+    color: hsl(60, 10%, 19%);
+}
+
+.choices_theme2 {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.slider_theme2 {
+    background-color: hsl(25, 98%, 40%);
+}
+
+.display_theme2 {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+
+.keyboard_theme2 {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.key_theme2 {
+    background-color: hsl(45, 7%, 89%);
+    color: hsl(60, 10%, 19%);
+    border-bottom: 4px solid hsl(35, 11%, 61%)
+}
+
+.rd_theme2 {
+    background-color: hsl(185, 42%, 37%);
+    color: white;
+    border-bottom: 4px solid hsl(185, 58%, 25%);
+}
+
+.equal_theme2 {
+    background-color: hsl(25, 98%, 40%);
+    color: white;
+    border-bottom: 4px solid hsl(25, 99%, 27%);
+}
+
+/* THEME3 */
+
+.body_theme3 {
+    background-color: hsl(268, 75%, 9%);
+}
+
+.theme_keys_theme3 {
+    color: hsl(52, 100%, 62%);
+}
+
+.choices_theme3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.slider_theme3 {
+    background-color: hsl(176, 100%, 44%);
+}
+
+.display_theme3 {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+}
+
+.keyboard_theme3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.key_theme3 {
+    background-color: hsl(268, 47%, 21%);
+    color: hsl(52, 100%, 62%);
+    border-bottom: 4px solid hsl(290, 70%, 36%);
+}
+
+.rd_theme3 {
+    background-color: hsl(281, 89%, 26%);
+    color: white;
+    border-bottom: 4px solid hsl(285, 91%, 52%);
+}
+
+.equal_theme3 {
+    background-color: hsl(176, 100%, 44%);
+    color: hsl(198, 20%, 13%);
+    border-bottom: 4px solid hsl(177, 92%, 70%);
+}
+
+/* -=--=-=---=--=-=-=-=-=-=-=-=-=- */
+
+@media(min-width: 992px) {
+    body, html {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container {
+        width: 400px;
+        height: 80vh;
+        gap: 20px;
+        padding: 0px;
+    }
+
+    #display {
+        height: 120px;
+    }
+
+    #keyboard {
+        gap: 20px;
+    }
+
+    .key {
+        width: 70px;
+        height: 50px;
+    }
+
+    .bigger {
+        width: 160px;
+    }
 }
