@@ -27,6 +27,7 @@ h1 {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     width: 120px;
     height: 50px;
     background-color: grey;
@@ -43,28 +44,4 @@ h1 {
     width: 40px;
     border-radius: 50%;
     transition: all .5s ease-in-out;
-}
-
-#r1:checked ~ .switch {
-    background-color: red;
-}
-
-#r2:checked ~ .swicth {
-    background-color: green;
-}
-
-#r3:checked ~ .swicth {
-    background-color: blue;
-}
-
-#r1:checked ~ .switch .slider {
-    transform: translateX(70px);
-}
-
-#r2:checked ~ .swicth .slider {
-    transform: translateX(40px);
-}
-
-#r3:checked ~ .swicth .slider {
-    transform: translateX(60px);
 }

@@ -3,6 +3,7 @@ const theme_keys = document.querySelector('#theme_keys')
 const choices = document.querySelector('#choices')
 const slider = document.querySelector('#slider')
 const display = document.querySelector('#display')
+const keyboard = document.querySelector('#keyboard')
 const key = [...document.querySelectorAll('.key')]
 const num = [...document.querySelectorAll('.num')]
 const op = [...document.querySelectorAll('.op')]
@@ -58,3 +59,5 @@ kequal.addEventListener("click", () => {
     const result = eval(display.innerHTML)
     display.innerHTML = result
 })
+
+// choices.style.justifyContent = 'flex-end'

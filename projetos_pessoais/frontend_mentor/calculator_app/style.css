@@ -14,6 +14,9 @@
 }
 
 body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     font-family: var(--text);
@@ -29,7 +32,8 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 30px;
+    width: 310px;
+    padding: 30px 0px;
 }
 
 #theme_keys {
@@ -72,10 +76,12 @@ body, html {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     width: 70px;
     height: 25px;
     border-radius: 40px;
     padding: 5px;
+    transition: all .5s ease-in-out;
 }
 
 .choices_theme1 {
@@ -87,6 +93,7 @@ body, html {
     height: 15px;
     width: 15px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .slider_theme1 {
@@ -113,8 +120,8 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-    padding: 30px;
+    gap: 10px;
+    padding: 20px;
     border-radius: 10px;
     width: 100%;
 }
@@ -127,8 +134,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15vw;
-    height: 15vw;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
     font-family: var(--text);
     font-size: 1rem;
@@ -143,7 +150,7 @@ body, html {
 }
 
 .bigger {
-    width: 32vw;
+    width: 130px;
 }
 
 #kdel, #kreset {
