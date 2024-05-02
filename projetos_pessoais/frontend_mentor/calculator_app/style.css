@@ -94,6 +94,7 @@ body, html {
     width: 15px;
     border-radius: 50%;
     cursor: pointer;
+    transition: all .5s ease-in-out;
 }
 
 .slider_theme1 {
@@ -141,12 +142,22 @@ body, html {
     font-size: 1rem;
     font-weight: 700;
     border: none;
+    cursor: pointer;
+    transition-duration: .3s;
 }
 
 .key_theme1 {
     background-color: hsl(30, 25%, 89%);
     color: hsl(221, 14%, 31%);
     border-bottom: 4px solid hsl(28, 16%, 65%);
+}
+
+.key_theme1:hover, .key_theme2:hover, .rd_theme1:hover, .rd_theme2:hover, .equal_theme1:hover, .equal_theme2:hover {
+    filter: contrast(150%);
+}
+
+.key_theme3:hover, .rd_theme3:hover, .equal_theme3:hover {
+    filter: saturate(250%);
 }
 
 .bigger {
