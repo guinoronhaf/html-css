@@ -153,8 +153,12 @@ body, html {
     border-bottom: 4px solid hsl(28, 16%, 65%);
 }
 
-.key_theme1:hover, .key_theme2:hover, .rd_theme1:hover, .rd_theme2:hover, .equal_theme1:hover, .equal_theme2:hover {
-    filter: contrast(150%);
+.key_theme1:hover, .key_theme2:hover, .rd_theme1:hover, .equal_theme1:hover, .equal_theme2:hover {
+    filter: contrast(180%);
+}
+
+.rd_theme2:hover {
+    filter: saturate(250%);
 }
 
 .key_theme3:hover, .rd_theme3:hover, .equal_theme3:hover {
