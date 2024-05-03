@@ -22,6 +22,7 @@ body, html {
     font-family: var(--text);
     font-size: 32px;
     font-weight: 700;
+    transition: all .5s ease-in-out;
 }
 
 .body_theme1 {
@@ -42,6 +43,7 @@ body, html {
     justify-content: space-between;
     align-items: flex-end;
     font-size: 0.5rem;
+    transition: all .5s ease-in-out;
 }
 
 .theme_keys_theme1 {
@@ -111,6 +113,7 @@ body, html {
     padding: 20px 30px;
     font-size: 1.5rem;
     border-radius: 10px;
+    transition: all .5s ease-in-out;
 }
 
 .display_theme1 {
@@ -126,6 +129,7 @@ body, html {
     padding: 20px;
     border-radius: 10px;
     width: 100%;
+    transition: all .5s ease-in-out;
 }
 
 .keyboard_theme1 {
