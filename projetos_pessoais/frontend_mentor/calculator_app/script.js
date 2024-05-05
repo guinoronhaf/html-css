@@ -14,6 +14,9 @@ const kequal = document.querySelector('#kequal')
 let opflag = false
 let pointflag = false
 
+// const d = 'hello'
+// console.log(d.replace(d[d.length - 1], ''))
+
 num.forEach((el) => {
     el.addEventListener("click", (e) => {
         opflag = false
@@ -41,7 +44,7 @@ op.forEach((el) => {
         if (!opflag) {
             opflag = true
             if (display.innerHTML == '0') {
-                display.innerHTML = ''
+                display.innerHTML = '0'
             }
             if (e.target.innerHTML == 'x') {
                 display.innerHTML += '*'
@@ -53,7 +56,13 @@ op.forEach((el) => {
 })
 
 kdel.addEventListener("click", () => {
-    display.innerHTML = '0'
+    let d = display.textContent
+    if (d[d.length - 1] == d[0]) {
+        display.innerHTML = '0'
+    } else {
+        d = d.replace(d[d.length - 1], '')
+        display.innerHTML = d
+    }
 })
 
 kequal.addEventListener("click", () => {
