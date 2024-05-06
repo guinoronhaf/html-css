@@ -57,7 +57,7 @@ op.forEach((el) => {
 
 kdel.addEventListener("click", () => {
     let d = display.textContent
-    if (d[d.length - 1] == d[0]) {
+    if (d.length == 1) {
         display.innerHTML = '0'
     } else {
         d = d.replace(d[d.length - 1], '')
