@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Newsletter sign-up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+        <div class="login_container hide">
+            <header class="login_image"></header>
+            <main class="login_data">
+                <h1>Stay updated!</h1>
+                <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                <p class="login_info_list"><span><img src="images/icon-list.svg" alt=""></span>Product discovery and building what matters</p>
+                <p class="login_info_list"><span><img src="images/icon-list.svg" alt=""></span>Measuring to ensure updates are a success</p>
+                <p class="login_info_list"><span><img src="images/icon-list.svg" alt=""></span>And much more!</p>
+                <div class="login_data_email">
+                    <div class="login_data_email_p">
+                        <p>Email address</p>
+                        <p id="p_error" class="hide">Valid email required</p>
+                    </div>
+                    <input class="f_email" type="text" name="f_email" id="f_email" placeholder="email@company.com">
+                </div>
+                <input id="submit" type="button" value="Subscribe to monthly newsletter">
+            </main>
+        </div>
+        <div class="success_container">
+            <section class="success_container_info">
+                <img src="images/icon-success.svg" alt="">
+                <h1>Thanks for subscribing!</h1>
+                <p>A confirmation email has been sent to <span class="success_email"></span>. Please open in and click the button inside to confirm your subscription.</p>
+            </section>
+            <input id="dismiss" type="button" value="Dismiss message">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
