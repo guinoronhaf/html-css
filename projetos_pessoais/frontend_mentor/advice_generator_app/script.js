@@ -11,7 +11,6 @@ async function getAdvice() {
     const res = await fetch(endpoint)
         .then(res => res.json())
         .then((data) => {
-            console.log(data);
             const id = data.slip.id;
             const advice = data.slip.advice;
             adviceTitle.innerText = `ADVICE #${id}`;
