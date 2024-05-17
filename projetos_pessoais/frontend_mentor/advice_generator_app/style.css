@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --light_cyan: hsl(193, 38%, 86%);
+    --neon_green: hsl(150, 100%, 66%);
+    --grayish_blue: hsl(217, 19%, 38%);
+    --dark_grayish_blue: hsl(217, 19%, 24%);
+    --dark_blue: hsl(218, 23%, 16%);
+    --text: 'Manrope';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark_blue);
+    font-family: var(--text), sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--dark_grayish_blue);
+    padding: 40px 20px;
+    color: var(--light_cyan);
+    border-radius: 10px;
+    height: 330px;
+    width: 100%;
+}
+
+#advice_title {
+    color: var(--neon_green);
+    font-size: .4rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+#advice_content {
+    font-size: .9rem;
+    text-align: center;
+    height: 150px;
+}
+
+#divider {
+    background-image: url('images/pattern-divider-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#dice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    background-color: var(--neon_green);
+    border-radius: 50%;
+    margin-top: -35px;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+#dice img {
+    width: 25px;
+    height: 25px;
+}
+
+#dice:hover {
+    box-shadow: 1px 1px 15px var(--neon_green);
+}
+
+/* -=-=--=-=-=-=-=--=-=-=-=-=- */
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .box {
+        width: 400px;
+    }
+}
+
+@media (min-width: 992px) {
+    .box {
+        gap: 30px;
+        width: 450px;
+    }
+
+    #divider {
+        background-image: url('images/pattern-divider-desktop.svg');
+    }
+}
