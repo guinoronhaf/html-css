@@ -3,7 +3,7 @@ const adviceTitle = document.querySelector('#advice_title');
 const adviceContent = document.querySelector('#advice_content');
 const dice = document.querySelector('#dice');
 
-// async function to get data by API
+// async function to get data from API
 async function getAdvice() {
     
     const endpoint = 'https://api.adviceslip.com/advice';
