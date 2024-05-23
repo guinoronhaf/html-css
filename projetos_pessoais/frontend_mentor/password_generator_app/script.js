@@ -145,25 +145,25 @@ const checkingSecurity = () => {
 
     if (securityLevel == 1) {
         levelOutput.textContent = 'VERY WEAK';
-        var cor = 'rgb(231, 45, 45)';
+        var color = 'rgb(231, 45, 45)';
     }
     else if (securityLevel == 2) {
         levelOutput.textContent = 'WEAK';
-        var cor = 'rgb(236, 136, 54)';
+        var color = 'rgb(236, 136, 54)';
     }
     else if (securityLevel == 3) {
         levelOutput.textContent = 'MEDIUM';
-        var cor = 'rgb(235, 235, 114)'
+        var color = 'rgb(235, 235, 114)'
     }
     else if (securityLevel == 4) {
         levelOutput.textContent = 'STRONG';
-        var cor = 'rgb(121, 235, 111)'
+        var color = 'rgb(121, 235, 111)'
     }
 
     howManyBarsComplete.map((bar) => {
         bar.classList.remove('incomplete');
         bar.classList.add('complete');
-        bar.style.backgroundColor = `${cor}`
+        bar.style.backgroundColor = `${color}`
     });
     howManyBarsIncomplete.map((bar) => {
         bar.classList.remove('complete');
