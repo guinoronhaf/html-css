@@ -27,6 +27,7 @@ body, html {
     color: white;
     font-family: var(--text);
     font-size: 16px;
+    overflow: hidden;
 }
 
 .container {
@@ -50,24 +51,30 @@ body, html {
     padding: 15px 20px;
 }
 
-.display > .display_password {
+.display  .display_password {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.display > .display_copied {
+.display > .display_messages {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.display  .display_copied {
     font-size: 0.8rem;
     color: var(--neon_green);
     /* animation: comeAndGo 3s  ease-in-out; */
 }
 
-.display > #display_icon {
+.display  #display_icon {
     color: var(--neon_green);
     cursor: pointer;
     transition-duration: .3s;
 }
 
-.display > #display_icon:hover {
+.display  #display_icon:hover {
     color: white;
 }
 
@@ -102,6 +109,7 @@ body, html {
 
 .range_slider > #range {
     width: 100%;
+    accent-color: var(--neon_green);
 }
 
 .menu_requirements {
@@ -195,6 +203,14 @@ body, html {
     }
 
     50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    90% {
         opacity: 1;
     }
 

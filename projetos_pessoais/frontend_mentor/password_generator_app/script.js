@@ -3,6 +3,7 @@ const copied = document.querySelector('#display_copied');
 const copiedIcon = document.querySelector('#display_icon');
 const spanLength = document.querySelector('#span_length');
 const range = document.querySelector('#range');
+const inputsChk = [...document.querySelectorAll('input[type=checkbox')];
 const chkUpp = document.querySelector('#upp');
 const chkLow = document.querySelector('#low');
 const chkNum = document.querySelector('#num');
@@ -10,6 +11,12 @@ const chkSym = document.querySelector('#sym');
 const levelOutput = document.querySelector('#level_output');
 const bars = [...document.querySelectorAll('.bars')];
 const generate = document.querySelector('#generate');
+
+let passwordFlag = false;
+
+inputsChk.map((input) => {
+    input.checked = true;
+});
 
 const getLength = () => {
     range.addEventListener("input", (e) => {
@@ -19,7 +26,6 @@ const getLength = () => {
 
 getLength();
 
-
 const characters = Array.from(Array(26)).map((_, i) => i + 97);
 const lowercaseCharac = characters.map((item) => String.fromCharCode(item));
 const uppercaseCharac = lowercaseCharac.map((item) => item.toUpperCase());
@@ -28,15 +34,17 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const symbols = ['!', '@', '#', '$', '%', '&', '*', '_', '^', '~'];
 
 generate.addEventListener("click", () => {
-    display.textContent = generatePassword();
+    generatePassword();
     checkingSecurity();
 });
 
 copiedIcon.addEventListener("click", () => {
-    copied.classList.remove('hide');
-    copied.setAttribute('style', 'font-size: 0.8rem; color: var(--neon_green); animation: comeAndGo 2s forwards ease-in-out');
-    const time = setTimeout(copyPassword, 2000);
-    navigator.clipboard.writeText(display.textContent);
+    if (passwordFlag) {
+        copied.classList.remove('hide');
+        copied.setAttribute('style', 'font-size: 0.8rem; color: var(--neon_green); animation: comeAndGo 2s forwards ease-in-out');
+        const time = setTimeout(copyPassword, 2000);
+        navigator.clipboard.writeText(display.textContent);
+    }
 })
 
 const copyPassword = () => {
@@ -92,7 +100,7 @@ const generateArrayAndValidation = (
 };
 
 const generatePassword = () => {
-    const passwordObjetc = generateArrayAndValidation(
+    const passwordObject = generateArrayAndValidation(
         chkUpp.checked,
         chkLow.checked,
         chkNum.checked,
@@ -100,9 +108,9 @@ const generatePassword = () => {
         range.value
     );
 
-    const elementsRequired = passwordObjetc.array;
+    const elementsRequired = passwordObject.array;
 
-    const validation = passwordObjetc.validation;
+    const validation = passwordObject.validation;
 
     const length = range.value;
 
@@ -114,7 +122,13 @@ const generatePassword = () => {
         };
     };
 
-    return password;
+    if (passwordObject.array.length != 0) {
+        display.textContent = password;
+        passwordFlag = true;
+    } else {
+        display.textContent = 'No requirements!';
+        passwordFlag = false;
+    }
 };
 
 const checkingSecurity = () => {
@@ -156,7 +170,4 @@ const checkingSecurity = () => {
         bar.classList.add('incomplete');
         bar.style.backgroundColor = '#14131A';
     });
-
-
-
 };
