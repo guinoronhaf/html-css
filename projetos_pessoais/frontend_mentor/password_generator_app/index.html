@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="title">Password Generator</h1>
+        <div id="display" class="display">
+            <span id="display_password" class="display_password">--</span>
+            <p id="display_copied" class="display_copied hide">Copied!</p>
+            <i id="display_icon" class="bi bi-copy"></i>
+        </div>
+        <div id="menu" class="menu">
+            <div class="menu_length">
+                <p id="charac_length">Character Length</p>
+                <span id="span_length">10</span>
+            </div>
+            <div id="range_slider" class="range_slider">
+                <input type="range" name="range" id="range" min="5" max="15" value="10">
+            <div>
+            <div class="menu_requirements">
+                <div class="requirements">
+                    <input type="checkbox" name="upp" id="upp"> 
+                    <label for="upp">Include Uppercase Letters</label>
+                </div>
+                <div class="requirements">
+                    <input type="checkbox" name="low" id="low"> 
+                    <label for="low">Include Lowercase Letters</label>
+                </div>
+                <div class="requirements">
+                    <input type="checkbox" name="num" id="num"> 
+                    <label for="num">Include Numbers</label>
+                </div>
+                <div class="requirements">
+                    <input type="checkbox" name="sym" id="sym"> 
+                    <label for="sym">Include Symbols</label>
+                </div>
+            </div>
+            <div class="menu_security">
+                <p class="menu_security_title">STRENGTH</p>
+                <div class="menu_security_level">
+                    <span id="level_output" class="level_output">--</span>
+                    <div class="bars incomplete"></div>
+                    <div class="bars incomplete"></div>
+                    <div class="bars incomplete"></div>
+                    <div class="bars incomplete"></div>
+                </div>
+            </div>
+            <div class="menu_button">
+                <button id="generate" class="generate">GENERATE <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
