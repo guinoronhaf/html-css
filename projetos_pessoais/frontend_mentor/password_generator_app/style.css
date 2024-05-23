@@ -171,6 +171,7 @@ body, html {
     width: 100%;
     padding: 15px;
     background-color: var(--neon_green);
+    color: var(--content_box);
     font-size: var(--text);
     font-weight: 700;
     border: none;
