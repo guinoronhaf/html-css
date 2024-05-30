@@ -4,6 +4,8 @@ const pClick = [...document.querySelectorAll('.pClick')];
 const menuImg = [...document.querySelectorAll('.menuImg')];
 const menuList = [...document.querySelectorAll('.menuList')];
 const hamb = document.querySelector('#hamb');
+const navigationOptions = document.querySelector('#navigationOptions');
+const navigationButtons = document.querySelector('#navigationButtons');
 
 hamb.addEventListener("click", () => {
     background.classList.remove('hide');
