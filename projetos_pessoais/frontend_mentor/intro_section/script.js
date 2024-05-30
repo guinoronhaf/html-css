@@ -1,40 +1,24 @@
-const info = document.querySelector('#info')
-const menu = document.querySelector('#hamb')
-const navegation = document.querySelector('.nav')
-const x = document.querySelector('#exit')
-let navArrows = [...document.querySelectorAll('.nav_arrows')]
-let navArrowsImg = [...document.querySelectorAll('.nav_arrows > img')]
-let lists = [...document.querySelectorAll('.lists')]
+const background = document.querySelector('#background');
+const menuExit = document.querySelector('#menuExit');
+const pClick = [...document.querySelectorAll('.pClick')];
+const menuImg = [...document.querySelectorAll('.menuImg')];
+const menuList = [...document.querySelectorAll('.menuList')];
+const hamb = document.querySelector('#hamb');
 
-// const checkImage = (l) => {
-//     l.map((el, pos) => {
-//     if (el.src === "images/icon-arrow-down.svg") {
-//         el.src = "images/icon-arrow-up.svg"
-//     } else {
+hamb.addEventListener("click", () => {
+    background.classList.remove('hide');
+});
 
-//     }
-//     })
-// }
+menuExit.addEventListener("click", () => {
+    background.classList.add('hide');
+});
 
-menu.addEventListener("click", () => {
-    info.classList.toggle('opac')
-    navegation.classList.toggle('disappear')
-})
+pClick.map((el, pos) => {
+    el.addEventListener("click", (e) => {
+        const containsHide =  menuList[pos].classList.contains('hide');
+    
+        containsHide?menuImg[pos].setAttribute('src', 'http://127.0.0.1:5500/intro_section/images/icon-arrow-up.svg'):menuImg[pos].setAttribute('src', 'http://127.0.0.1:5500/intro_section/images/icon-arrow-down.svg');
 
-x.addEventListener("click", () => {
-    info.classList.toggle('opac')
-    navegation.classList.toggle('disappear')
-})
-
-navArrows.map((el, pos) => {
-    el.addEventListener("click", () => {
-        lists[pos].classList.toggle('disappear')
-        if (navArrowsImg[pos].src != "images/icon-arrow-up.svg") {
-            navArrowsImg[pos].setAttribute('src', 'images/icon-arrow-up.svg')
-        } else if (navArrowsImg[pos].src != "images/icon-arrow-down.svg") {
-            navArrowsImg[pos].setAttribute('src', 'images/icon-arrow-down.svg')
-        }
-    })
-})
-
-console.log(navArrowsImg[1])
+        menuList[pos].classList.toggle('hide');
+    });
+});
