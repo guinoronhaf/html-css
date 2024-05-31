@@ -117,6 +117,17 @@ body, html {
     gap: 10px;
 }
 
+.circleInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--dark_grayish_blue);
+    cursor: pointer;
+}
+
 .circle {
     display: flex;
     justify-content: center;
@@ -125,6 +136,10 @@ body, html {
     height: 20px;
     border-radius: 50%;
     border: 1px solid var(--dark_grayish_blue);
+    cursor: pointer;
+}
+
+.cross {
     cursor: pointer;
 }
 
@@ -140,10 +155,6 @@ body, html {
     border-radius: 5px;
     font-size: 0.8rem;
     color: var(--dark_grayish_blue);
-}
-
-.touchable:hover {
-    text-decoration: underline;
 }
 
 .status {
@@ -176,3 +187,12 @@ body, html {
     background-image: linear-gradient(to right, var(--check_background1), var(--check_background2)) !important;
 }
 
+.checked {
+    text-decoration: line-through !important;
+    color: var(--dark_grayish_blue);
+}
+
+.touchable:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

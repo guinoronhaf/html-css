@@ -24,7 +24,9 @@
                 <div><img src="images/icon-sun.svg" alt=""></div>
             </header>
             <section id="mainInput" class="taskBox darkTasks">
-                <div class="circle"></div>
+                <div class="circleInput">
+                    <img class="hide" src="images/icon-check.svg" alt="">
+                </div>
                 <input type="text" name="task" id="task" placeholder="Create a new todo...">
             </section>
             <section id="mainTasks" class="mainTasks">
@@ -35,39 +37,47 @@
                         </div>
                         <p>Run</p>
                     </div>
-                    <img src="images/icon-cross.svg" alt="">
+                    <img class="cross" src="images/icon-cross.svg" alt="">
                 </div>
                 <div class="taskBox darkTasks">
                     <div>
-                        <div class="circle"></div>
+                        <div class="circle">
+                            <img class="hide" src="images/icon-check.svg" alt="">
+                        </div>
                         <p>Walk</p>
                     </div>
-                    <img src="images/icon-cross.svg" alt="">
+                    <img class="cross" src="images/icon-cross.svg" alt="">
                 </div>
                 <div class="taskBox darkTasks">
                     <div>
-                        <div class="circle"></div>
+                        <div class="circle">
+                            <img class="hide" src="images/icon-check.svg" alt="">
+                        </div>
                         <p>Play</p>
                     </div>
-                    <img src="images/icon-cross.svg" alt="">
+                    <img class="cross" src="images/icon-cross.svg" alt="">
                 </div>
                 <div class="taskBox darkTasks">
                     <div>
-                        <div class="circle"></div>
+                        <div class="circle">
+                            <img class="hide" src="images/icon-check.svg" alt="">
+                        </div>
                         <p>Cook</p>
                     </div>
-                    <img src="images/icon-cross.svg" alt="">
+                    <img class="cross" src="images/icon-cross.svg" alt="">
                 </div>
                 <div class="taskBox darkTasks">
                     <div>
-                        <div class="circle"></div>
+                        <div class="circle">
+                            <img class="hide" src="images/icon-check.svg" alt="">
+                        </div>
                         <p>Talk to someone</p>
                     </div>
-                    <img src="images/icon-cross.svg" alt="">
+                    <img class="cross" src="images/icon-cross.svg" alt="">
                 </div>
                 <div id="items" class="taskBox darkTasks">
-                    <p>5 items left</p>
-                    <p class="touchable">Clear Completed</p>
+                    <p><span id="itemsQuantity">5</span> items left</p>
+                    <p id="clear" class="touchable">Clear Completed</p>
                 </div>
             </section>
             <footer id="mainFooter" class="taskBox darkTasks">
