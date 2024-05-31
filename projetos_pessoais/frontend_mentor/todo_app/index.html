@@ -4,89 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     
-    <div class="container">
-        <div id="background" class="background">
-            <section id="backgroundImg" class="backgroundImg">
-                <img src="images/bg-mobile-dark.jpg" alt="">
-            </section>
-            <section id="backgroundColor" class="backgroundColor darkBgColor"></section>
-        </div>
+    <main id="main" class="main">
+        <header class="mainHeader">
+            <h1 class="mainHeaderLogo">T O D O</h1>
+            <img src="images/icon-sun.svg" alt="">
+        </header>
+        <section class="mainInput darkBox">
+            <div id="inputCircle" class="circle"></div>
+            <input type="text" name="iTask" id="iTask" placeholder="Create a new todo...">
+        </section>
+        <section class="mainTasks">
+            <div id="tasks" class="tasks">
+                <div class="taskBox darkBox">
+                    <p>
+                        <span class="circle">
+                            <img class="hide" src="images/icon-check.svg" alt="">
+                        </span>
+                        Run
+                    </p>
+                    <img class="cross" src="images/icon-cross.svg" alt="">
+                </div>
+                <div class="taskBox darkBox">
+                    <p>
+                        <span class="circle">
+                            <img class="hide" src="images/icon-check.svg" alt="">
+                        </span>
+                        Walk
+                    </p>
+                    <img class="cross" src="images/icon-cross.svg" alt="">
+                </div>
+                <div class="taskBox darkBox">
+                    <p>
+                        <span class="circle">
+                            <img class="hide" src="images/icon-check.svg" alt="">
+                        </span>
+                        Eat
+                    </p>
+                    <img class="cross" src="images/icon-cross.svg" alt="">
+                </div>
+            </div>
+            <div class="tasksLeft darkBox">
+                <p><span id="quantity">3</span> items left</p>
+                <p id="clear" class="touchable">Clear Completed</p>
+            </div>
+        </section>
+        <section class="mainStatus darkBox">
+            <p id="all" class="touchable selected">All</p>
+            <p id="active" class="touchable">Active</p>
+            <p id="completed" class="touchable">Completed</p>
+        </section>
+    </main>
 
-        <div id="main" class="main">
-            <header class="mainHeader">
-                <h1>T O D O </h1>
-                <div><img src="images/icon-sun.svg" alt=""></div>
-            </header>
-            <section id="mainInput" class="taskBox darkTasks">
-                <div class="circleInput">
-                    <img class="hide" src="images/icon-check.svg" alt="">
-                </div>
-                <input type="text" name="task" id="task" placeholder="Create a new todo...">
-            </section>
-            <section id="mainTasks" class="mainTasks">
-                <div class="taskBox darkTasks">
-                    <div>
-                        <div class="circle">
-                            <img class="hide" src="images/icon-check.svg" alt="">
-                        </div>
-                        <p>Run</p>
-                    </div>
-                    <img class="cross" src="images/icon-cross.svg" alt="">
-                </div>
-                <div class="taskBox darkTasks">
-                    <div>
-                        <div class="circle">
-                            <img class="hide" src="images/icon-check.svg" alt="">
-                        </div>
-                        <p>Walk</p>
-                    </div>
-                    <img class="cross" src="images/icon-cross.svg" alt="">
-                </div>
-                <div class="taskBox darkTasks">
-                    <div>
-                        <div class="circle">
-                            <img class="hide" src="images/icon-check.svg" alt="">
-                        </div>
-                        <p>Play</p>
-                    </div>
-                    <img class="cross" src="images/icon-cross.svg" alt="">
-                </div>
-                <div class="taskBox darkTasks">
-                    <div>
-                        <div class="circle">
-                            <img class="hide" src="images/icon-check.svg" alt="">
-                        </div>
-                        <p>Cook</p>
-                    </div>
-                    <img class="cross" src="images/icon-cross.svg" alt="">
-                </div>
-                <div class="taskBox darkTasks">
-                    <div>
-                        <div class="circle">
-                            <img class="hide" src="images/icon-check.svg" alt="">
-                        </div>
-                        <p>Talk to someone</p>
-                    </div>
-                    <img class="cross" src="images/icon-cross.svg" alt="">
-                </div>
-                <div id="items" class="taskBox darkTasks">
-                    <p><span id="itemsQuantity">5</span> items left</p>
-                    <p id="clear" class="touchable">Clear Completed</p>
-                </div>
-            </section>
-            <footer id="mainFooter" class="taskBox darkTasks">
-                <p class="touchable status">All</p>
-                <p class="touchable">Active</p>
-                <p class="touchable">Completed</p>
-            </footer>
-        </div>
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -29,103 +29,105 @@
 body, html {
     height: 100vh;
     width: 100vw;
-    font-family: var(--text);
     font-size: 18px;
-    overflow: hidden;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.background {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.backgroundImg {
-    height: 30%;
-}
-
-.backgroundImg > img {
-    width: 100%;
-    height: auto;
-}
-
-.backgroundColor {
-    height: 70%;
-    width: 100%;
-}
-
-.darkBgColor {
-    background-color: var(--very_dark_blue);
+    font-family: var(--text);
 }
 
 .main {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 50px 20px;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
     width: 100%;
-    background-color: transparent;
+    background-color: var(--very_dark_blue);
+    background-repeat: repeat-x;
+    background-image: url('images/bg-mobile-dark.jpg');
+    background-size: contain;
+    position: absolute;
+    padding: 60px 20px;
 }
 
 .mainHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--very_light_grey);
-    font-size: 0.7rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-#mainInput {
+.mainHeader > h1 {
+    color: var(--very_light_grey);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.mainInput {
     display: flex;
-    justify-content: stretch !important;
     align-items: center;
     gap: 10px;
+    padding: 15px;
     border-radius: 5px;
-    border: none !important;
+    width: 100%;
 }
 
-#mainInput > input {
+.mainInput > input {
     background-color: transparent;
     border: none;
     font-family: var(--text);
+    color: var(--dark_grayish_blue);
+}
+
+.mainInput > input:focus {
+    outline: none;
+}
+
+.mainTasks {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
 }
 
 .taskBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 15px 20px;
+    padding: 15px;
+    font-size: 0.8rem;
     border-bottom: 1px solid var(--very_dark_grayish_blue);
-    font-size: 0.7rem;
 }
 
-.taskBox > div {
+.taskBox > p {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.circleInput {
+.tasksLeft {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid var(--dark_grayish_blue);
-    cursor: pointer;
+    padding: 20px;
+    font-size: 0.7rem;
+    color: var(--dark_grayish_blue) !important;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.mainStatus {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+/*auxiliar classes*/
+
+.darkBox {
+    background-color: var(--very_dark_desaturated_blue);
+    color: var(--dark_grayish_blue);
 }
 
 .circle {
@@ -134,50 +136,11 @@ body, html {
     align-items: center;
     width: 20px;
     height: 20px;
+    background-color: transparent;
+    border: 1px solid var(--very_dark_grayish_blue);
     border-radius: 50%;
-    border: 1px solid var(--dark_grayish_blue);
     cursor: pointer;
 }
-
-.cross {
-    cursor: pointer;
-}
-
-#items {
-    font-size: 0.6rem !important;
-    color: var(--dark_grayish_blue);
-}
-
-#mainFooter {
-    display: flex;
-    justify-content: space-evenly;
-    border: none !important;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    color: var(--dark_grayish_blue);
-}
-
-.status {
-    color: var(--bright_blue);
-}
-
-
-/*themes*/
-
-/*DARK*/
-
-.darkBgColor {
-    background-color: var(--very_dark_blue);
-}
-
-.darkTasks {
-    background-color: var(--very_dark_desaturated_blue);
-    color: var(--light_grayish_blue);
-}
-
-/**/
-
-/*-=-=-=-=-=-=-=auxiliar classes =-=-=-=-=-=--=-=-=-=-=*/
 
 .hide {
     display: none !important;
@@ -188,11 +151,34 @@ body, html {
 }
 
 .checked {
-    text-decoration: line-through !important;
-    color: var(--dark_grayish_blue);
+    text-decoration: line-through;
+    color: var(--very_dark_grayish_blue) !important;
+}
+
+.cross {
+    cursor: pointer;
+}
+
+.selected {
+    color: var(--bright_blue) !important;
+}
+
+.touchable {
+    cursor: pointer;
 }
 
 .touchable:hover {
     text-decoration: underline;
-    cursor: pointer;
+}
+
+/**/
+
+@media(min-width: 992px) {
+    .main {
+        background-repeat: repeat-x;
+    }
+    
+    .mainHeader, .mainInput, .mainTasks, .mainStatus {
+        width: 500px;
+    }
 }
