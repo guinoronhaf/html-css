@@ -31,6 +31,7 @@ body, html {
     width: 100vw;
     font-family: var(--text);
     font-size: 18px;
+    overflow: hidden;
 }
 
 .container {
@@ -87,9 +88,11 @@ body, html {
 
 #mainInput {
     display: flex;
+    justify-content: stretch !important;
     align-items: center;
     gap: 10px;
     border-radius: 5px;
+    border: none !important;
 }
 
 #mainInput > input {
@@ -100,16 +103,53 @@ body, html {
 
 .taskBox {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
     padding: 15px 20px;
-    border-bottom: 1px solid var(--dark_grayish_blue);
+    border-bottom: 1px solid var(--very_dark_grayish_blue);
+    font-size: 0.7rem;
+}
+
+.taskBox > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: 1px solid var(--dark_grayish_blue);
+    cursor: pointer;
 }
+
+#items {
+    font-size: 0.6rem !important;
+    color: var(--dark_grayish_blue);
+}
+
+#mainFooter {
+    display: flex;
+    justify-content: space-evenly;
+    border: none !important;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: var(--dark_grayish_blue);
+}
+
+.touchable:hover {
+    text-decoration: underline;
+}
+
+.status {
+    color: var(--bright_blue);
+}
+
 
 /*themes*/
 
@@ -121,6 +161,18 @@ body, html {
 
 .darkTasks {
     background-color: var(--very_dark_desaturated_blue);
+    color: var(--light_grayish_blue);
 }
 
 /**/
+
+/*-=-=-=-=-=-=-=auxiliar classes =-=-=-=-=-=--=-=-=-=-=*/
+
+.hide {
+    display: none !important;
+}
+
+.gradient {
+    background-image: linear-gradient(to right, var(--check_background1), var(--check_background2)) !important;
+}
+
