@@ -8,10 +8,10 @@
 </head>
 <body>
     
-    <main id="main" class="main">
+    <main id="main" class="main darkMain">
         <header class="mainHeader">
             <h1 class="mainHeaderLogo">T O D O</h1>
-            <img src="images/icon-sun.svg" alt="">
+            <img id="appMode" src="images/icon-sun.svg" alt="">
         </header>
         <section class="mainInput darkBox">
             <div id="inputCircle" class="circle"></div>
@@ -49,10 +49,15 @@
             </div>
             <div class="tasksLeft darkBox">
                 <p><span id="quantity">3</span> items left</p>
+                <!-- <div id="status1" class="mainStatus lightBox hide">
+                    <p id="all" class="touchable selected">All</p>
+                    <p id="active" class="touchable">Active</p>
+                    <p id="completed" class="touchable">Completed</p>
+                </div> -->
                 <p id="clear" class="touchable">Clear Completed</p>
             </div>
         </section>
-        <section class="mainStatus darkBox">
+        <section id="status2" class="mainStatus darkBox">
             <p id="all" class="touchable selected">All</p>
             <p id="active" class="touchable">Active</p>
             <p id="completed" class="touchable">Completed</p>

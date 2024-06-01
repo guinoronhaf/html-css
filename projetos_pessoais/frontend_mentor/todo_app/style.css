@@ -31,6 +31,7 @@ body, html {
     width: 100vw;
     font-size: 18px;
     font-family: var(--text);
+    overflow-x: hidden;
 }
 
 .main {
@@ -38,14 +39,18 @@ body, html {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    background-color: var(--very_dark_blue);
     background-repeat: repeat-x;
     background-image: url('images/bg-mobile-dark.jpg');
     background-size: contain;
     position: absolute;
     padding: 60px 20px;
+    transition: all .2s;
+}
+
+#appMode {
+    cursor: pointer;
 }
 
 .mainHeader {
@@ -87,6 +92,8 @@ body, html {
     flex-direction: column;
     gap: 0px;
     width: 100%;
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.404);
+    transition: all .2s;
 }
 
 .taskBox {
@@ -95,7 +102,7 @@ body, html {
     align-items: center;
     padding: 15px;
     font-size: 0.8rem;
-    border-bottom: 1px solid var(--very_dark_grayish_blue);
+    transition: all .2s;
 }
 
 .taskBox > p {
@@ -112,23 +119,22 @@ body, html {
     font-size: 0.7rem;
     color: var(--dark_grayish_blue) !important;
     border-radius: 0px 0px 5px 5px;
+    transition: all .2s;
 }
 
 .mainStatus {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     border-radius: 5px;
     padding: 15px;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.404);
+    transition: all .2s;
 }
 
 /*auxiliar classes*/
-
-.darkBox {
-    background-color: var(--very_dark_desaturated_blue);
-    color: var(--dark_grayish_blue);
-}
 
 .circle {
     display: flex;
@@ -171,6 +177,35 @@ body, html {
     text-decoration: underline;
 }
 
+/*THEMES*/
+
+/*dark*/
+
+.darkBox {
+    background-color: var(--very_dark_desaturated_blue);
+    color: var(--dark_grayish_blue);
+    border-bottom: 1px solid var(--very_dark_grayish_blue);
+    transition: all .2s;
+}
+
+.darkMain {
+    background-color: var(--very_dark_blue);
+    transition: all .2s;
+}
+
+/*light*/
+
+.lightMain {
+    background-color: var(--light_grayish_blue);
+    transition: all .2s;
+}
+
+.lightBox {
+    background-color: var(--very_light_grey);
+    border-bottom: 1px solid var(--light_grayish_blue);
+    transition: all .2s;
+}
+
 /**/
 
 @media(min-width: 992px) {
@@ -180,5 +215,9 @@ body, html {
     
     .mainHeader, .mainInput, .mainTasks, .mainStatus {
         width: 500px;
+    }
+
+    .tasksLeft, .mainStatus {
+        font-size: 0.7rem;
     }
 }

@@ -9,13 +9,24 @@ const all = document.querySelector('#all');
 const active = document.querySelector('#active');
 const completed = document.querySelector('#completed');
 const mainStatusChildren = [...document.querySelector('.mainStatus').children];
+const statusDesktop = document.querySelector('#status1');
+const statusMobile = document.querySelector('#status2');
+const appMode = document.querySelector('#appMode');
+
+let styleFlag = null;
 
 const windowWidth = (e) => {
 
+    main.classList.contains('darkMain')?styleFlag='dark':styleFlag='light' 
+
     if (e.innerWidth >= 992) {
-        main.style.backgroundImage = "url('images/bg-desktop-dark.jpg')";
+        main.style.backgroundImage = `url('images/bg-desktop-${styleFlag}.jpg')`;
+        // statusDesktop.classList.toggle('hide');
+        // statusMobile.classList.toggle('hide');
     } else {
-        main.style.backgroundImage = "url('images/bg-mobile-dark.jpg')";
+        main.style.backgroundImage = `url('images/bg-mobile-${styleFlag}.jpg')`;
+        // statusDesktop.classList.toggle('hide');
+        // statusMobile.classList.toggle('hide');
     }
 
 };
@@ -87,7 +98,7 @@ class Task {
     addNewTask = () => {
         
         const taskBox = document.createElement('div');
-        taskBox.setAttribute('class', 'taskBox darkBox');
+        taskBox.setAttribute('class', `taskBox ${styleFlag}Box`);
 
         const paragraph = document.createElement('p');
 
@@ -208,3 +219,41 @@ completed.addEventListener("click", (e) => {
 
 
 // DARK MODE AND LIGHT MODE
+
+appMode.addEventListener("click", () => {
+
+    main.classList.contains('darkMain')?styleFlag='dark':styleFlag='light' 
+
+    if (styleFlag == 'dark') {
+
+        appMode.setAttribute('src', 'images/icon-moon.svg');
+
+        const boxes = [...document.querySelectorAll('.darkBox')];
+
+        boxes.map((dB) => {
+            dB.classList.toggle('darkBox');
+            dB.classList.toggle('lightBox');
+        });
+
+        main.classList.toggle('darkMain');
+        main.classList.toggle('lightMain');
+
+    } else {
+
+        appMode.setAttribute('src', 'images/icon-sun.svg');
+
+        const boxes = [...document.querySelectorAll('.lightBox')];
+
+        boxes.map((dB) => {
+            dB.classList.toggle('lightBox');
+            dB.classList.toggle('darkBox');
+        });
+
+        main.classList.toggle('lightMain');
+        main.classList.toggle('darkMain');
+
+    }
+
+    windowWidth(window);
+
+});
