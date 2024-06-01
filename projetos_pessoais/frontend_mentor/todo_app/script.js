@@ -8,12 +8,13 @@ const clear = document.querySelector('#clear');
 const all = document.querySelector('#all');
 const active = document.querySelector('#active');
 const completed = document.querySelector('#completed');
-const mainStatusChildren = [...document.querySelector('.mainStatus').children];
 const statusDesktop = document.querySelector('#status1');
 const statusMobile = document.querySelector('#status2');
+const statusDesktopChildren = [...document.querySelector('#status1').children];
+const statusMobileChildren = [...document.querySelector('#status2').children];
 const appMode = document.querySelector('#appMode');
-
 let styleFlag = null;
+let widthFlag = null;
 
 const windowWidth = (e) => {
 
@@ -21,29 +22,43 @@ const windowWidth = (e) => {
 
     if (e.innerWidth >= 992) {
         main.style.backgroundImage = `url('images/bg-desktop-${styleFlag}.jpg')`;
-        // statusDesktop.classList.toggle('hide');
-        // statusMobile.classList.toggle('hide');
+        statusDesktop.classList.remove('hide');
+        statusMobile.classList.add('hide');
+        widthFlag = 1;
     } else {
         main.style.backgroundImage = `url('images/bg-mobile-${styleFlag}.jpg')`;
-        // statusDesktop.classList.toggle('hide');
-        // statusMobile.classList.toggle('hide');
+        statusDesktop.classList.add('hide');
+        statusMobile.classList.remove('hide');
+        widthFlag = 2;
     }
 
 };
 
 window.addEventListener("resize", windowWidth(window));
 
-const itemsLeft = () => {
+const addBorder = (list) => {
 
+    list.map((box, pos) => {
+        if (pos == 0) {
+            box.style.borderRadius = '5px 5px 0px 0px';
+        } else {
+            box.style.borderRadius = '0%';
+        }
+    });
+
+};
+
+const itemsLeft = () => {
+    
     const notCompleted = tasksContainerChildren.filter((el) => {
         const circle = el.firstElementChild.firstElementChild;
         return !circle.classList.contains('gradient');
     });
-
-    quantity.textContent = notCompleted.length
-
-};
     
+    quantity.textContent = notCompleted.length
+    
+};
+
 tasksContainerChildren.forEach((task) => {
         
     const circle = task.firstElementChild.firstElementChild;
@@ -77,6 +92,15 @@ const showTasks = (array) => {
 windowWidth(window);
 showTasks(tasksContainerChildren);
 itemsLeft();
+addBorder(tasksContainerChildren);
+
+let mainStatusChildren = [...document.querySelector(`#status${widthFlag}`).children];
+
+window.addEventListener("resize", (e) => {
+
+    e.target.innerWidth>=992?mainStatusChildren=statusDesktopChildren:mainStatusChildren=statusMobileChildren;
+
+});
 
 const removeTask = (e) => {
 
@@ -87,6 +111,8 @@ const removeTask = (e) => {
     showTasks(tasksContainerChildren);
 
     itemsLeft();
+
+    addBorder(tasksContainerChildren);
     
 };
 
@@ -135,6 +161,7 @@ class Task {
         crossElement.addEventListener("click", () => {
             removeTask(taskBox);
             itemsLeft();
+            addBorder(tasksContainerChildren);
         });
 
     };
@@ -150,6 +177,7 @@ inputCircle.addEventListener("click", () => {
         inputTask.value = '';
         inputTask.focus();
         itemsLeft();
+        addBorder(tasksContainerChildren);
     }
 
 });
@@ -162,6 +190,7 @@ clear.addEventListener("click", () => {
     });
     showTasks(tasksContainerChildren);
     itemsLeft();
+    addBorder(tasksContainerChildren);
     
 });
 
@@ -197,20 +226,23 @@ const statusSelected = (status) => {
 
 };
 
-all.addEventListener("click", (e) => {
+mainStatusChildren[0].addEventListener("click", (e) => {
     showTasks(tasksContainerChildren);
     statusSelected(e.target);
     itemsLeft();
+    addBorder(tasksContainerChildren);
 });
 
 
-active.addEventListener("click", (e) => {
+mainStatusChildren[1].addEventListener("click", (e) => {
+    addBorder(notComplete());
     showTasks(notComplete());
     statusSelected(e.target);
     itemsLeft();
 });
 
-completed.addEventListener("click", (e) => {
+mainStatusChildren[2].addEventListener("click", (e) => {
+    addBorder(complete());
     showTasks(complete());
     statusSelected(e.target);
     itemsLeft();

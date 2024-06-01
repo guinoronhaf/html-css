@@ -40,7 +40,7 @@ body, html {
     align-items: center;
     gap: 20px;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-repeat: repeat-x;
     background-image: url('images/bg-mobile-dark.jpg');
     background-size: contain;
@@ -51,6 +51,7 @@ body, html {
 
 #appMode {
     cursor: pointer;
+    transition: all .5s;
 }
 
 .mainHeader {
@@ -146,6 +147,11 @@ body, html {
     border: 1px solid var(--very_dark_grayish_blue);
     border-radius: 50%;
     cursor: pointer;
+    transition: all .2s;
+}
+
+.circle:hover {
+    border: 1px solid var(--very_ligth_grayish_blue) !important;
 }
 
 .hide {
@@ -154,6 +160,7 @@ body, html {
 
 .gradient {
     background-image: linear-gradient(to right, var(--check_background1), var(--check_background2)) !important;
+    border: none !important;
 }
 
 .checked {
@@ -177,13 +184,25 @@ body, html {
     text-decoration: underline;
 }
 
+#status1 {
+    justify-content: center;
+    gap: 20px;
+    width: auto;
+    border: none !important;
+    padding: 0px;
+    background-color: transparent;
+    color: var(--dark_grayish_blue);
+    box-shadow: none !important;
+    font-size: 0.7rem;
+}
+
 /*THEMES*/
 
 /*dark*/
 
 .darkBox {
     background-color: var(--very_dark_desaturated_blue);
-    color: var(--dark_grayish_blue);
+    color: var(--light_grayish_blue);
     border-bottom: 1px solid var(--very_dark_grayish_blue);
     transition: all .2s;
 }
@@ -202,6 +221,7 @@ body, html {
 
 .lightBox {
     background-color: var(--very_light_grey);
+    color: var(--very_dark_desaturated_blue);
     border-bottom: 1px solid var(--light_grayish_blue);
     transition: all .2s;
 }
