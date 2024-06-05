@@ -1,36 +1,82 @@
 const keys = [...document.querySelector('.table').children];
 const options = [...document.querySelectorAll('.opt')];
 
-let victoryFlag = null;
-let tieFlag = null;
+let victoryFlag = false;
+let whoStarts = null;
+let c = 0;
 
-options.map((el) => {
-    el.addEventListener("click", (e) => {
-        e.target.parentNode.classList.add('hide');
-    });
-});
+const verifyVictory = (p) => {
 
-const verifyVictory = (a) => {
-
-    if (a[0].innerHTML == a[1].innerHTML == a[2].innerHTML != '' || a[0].innerHTML == a[3].innerHTML == a[6].innerHTML != '' || a[0].innerHTML == a[4].innerHTML == a[8].innerHTML != '' || a[2].innerHTML == a[5].innerHTML == a[8].innerHTML != 0 || a[6].innerHTML == a[7].innerHTML == a[8].innerHTML != '') {
+    if (keys[0].textContent == keys[1].textContent && keys[1].textContent == keys[2].textContent && keys[0].textContent == p) {
         victoryFlag = true;
-    } else {
-        victoryFlag = false;
+    } else if (keys[0].textContent == keys[3].textContent && keys[3].textContent == keys[6].textContent && keys[0].textContent == p) {
+        victoryFlag = true;
+    } else if (keys[0].textContent == keys[4].textContent && keys[4].textContent == keys[8].textContent && keys[0].textContent == p) {
+        victoryFlag = true;
+    } else if (keys[2].textContent == keys[5].textContent && keys[5].textContent == keys[8].textContent && keys[2].textContent == p) {
+        victoryFlag = true;
+    } else if (keys[3].textContent == keys[4].textContent && keys[4].textContent == keys[5].textContent && keys[3].textContent == p) {
+        victoryFlag = true;
+    } else if (keys[6].textContent == keys[7].textContent && keys[7].textContent == keys[8].textContent && keys[6].textContent == p) {
+        victoryFlag = true;
+    } else if (keys[1].textContent == keys[4].textContent && keys[4].textContent == keys[7].textContent && keys[1].textContent == p) {
+        victoryFlag = true
+    } else if (keys[6].textContent == keys[4].textContent && keys[4].textContent == keys[2].textContent && keys[6].textContent == p) {
+        victoryFlag = true
     }
 
 };
 
-const addElements = (p) => {
+const xPlays = () => {
 
     keys.map((el) => {
+
         el.addEventListener("click", (e) => {
-            e.target.innerHTML = p;
-            verifyVictory(keys);
-            victoryFlag?console.log('vitória'):console.log('nada');
+            e.target.innerHTML = 'X';
+
+            verifyVictory(e.target.innerHTML);
         });
+
     });
 
 };
 
-addElements('X');
+
+const oPlays = () => {
+
+    keys.map((el) => {
+
+        el.addEventListener("click", (e) => {
+            e.target.innerHTML = 'O';
+
+            verifyVictory(e.target.innerHTML);
+        });
+
+    });
+
+};
+
+options.map((el) => {
+
+    el.addEventListener("click", (e) => {
+
+        whoStarts = e.target.innerHTML;
+
+        console.log(whoStarts);
+
+        e.target.parentNode.classList.add('hide');
+
+    });
+
+});
+
+
+
+
+
+// if (keys[0].textContent == keys[1].textContent == 'X') {
+//     console.log('igual')
+// } else {
+//     console.log('diferente')
+// }
 
