@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test | Login Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="validations.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <section id="login" class="login">
+            <form class="form">
+                <div class="formEmail">
+                    <label for="f_user">Username or email</label>
+                    <input type="text" name="f_user" id="f_user" required placeholder="Type it here.">
+                </div>
+                <div class="formPassword">
+                    <label for="f_pass">Password</label>
+                    <div id="formPasswordInput" class="formPasswordInput">
+                        <input type="password" name="f_pass" id="f_pass" required>
+                        <i class="bi bi-eye-slash eyeIcon"></i>
+                    </div>
+                </div>
+                <div class="formButton">
+                    <input id="loginBtn" type="button" value="Login">
+                </div>
+            </form>
+            <div class="formActions">
+                <p id="have" class="action">Don't you have an account?</p>
+                <p id="forgot" class="action">Forgot your password?</p>
+            </div>
+        </section>
+        <section id="signup" class="signup hide">
+            <form class="form">
+                <div class="formName">
+                    <label for="f_nome">Name</label>
+                    <input type="text" name="f_nome" id="f_nome" required placeholder="Type it here.">
+                </div>
+                <div class="formEmailSign">
+                    <label for="f_email">Email</label>
+                    <input type="text" name="f_email" id="f_email" required placeholder="Type it here.">
+                </div>
+                <div class="formDate">
+                    <label for="f_date">Date of birth</label>
+                    <input type="date" name="f_date" id="f_date" required>
+                </div>
+                <div class="formPasswordSign">
+                    <div>
+                        <label for="f_passSign">Password</label><br>
+                        <input type="text" name="f_passSign" id="f_passSign" required placeholder="Type it here.">
+                    </div>
+                    <div>
+                        <label for="f_passSignConfirm">Confirm</label><br>
+                        <input type="text" name="f_passSignConfirm" id="f_passSignConfirm" required placeholder="Type it here.">
+                    </div>
+                </div>
+                <div class="formButtonSign">
+                    <button id="btnSign">Sign up</button>
+                </div>
+            </form>
+            <i id="arrowIcon" class="bi bi-arrow-left-circle"></i>
+        </section>
+    </div>
+</body>
+</html>

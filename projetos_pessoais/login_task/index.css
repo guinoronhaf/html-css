@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --text: 'Roboto';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--text);
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(223, 218, 218);
+    border: 1px solid black;
+    width: 90%;
+    height: 300px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form > div > label {
+    font-size: .7rem;
+}
+
+.form input {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.formPassword {
+    margin-bottom: 50px;
+}
+
+.formPasswordInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.formPasswordInput > input {
+    background-color: transparent;
+    border: none !important;
+}
+
+.formPasswordInput > input:focus {
+    outline: none;
+}
+
+.formPasswordInput > .eyeIcon {
+    color: rgba(0, 0, 0, 0.664);
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.formPasswordInput > .eyeIcon:hover {
+    color: black;
+}
+
+.formButton {
+    width: 50%;
+    align-self: center;
+}
+
+.formButton > input {
+    background-color: green;
+    color: white;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    border: none !important;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.formButton > input:hover {
+    filter: opacity(.6);
+}
+
+.formActions {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+}
+
+.formActions > .action {
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.formActions > .action:hover {
+    color: green;
+}
+
+.formPasswordSign > div > label {
+    font-size: .8rem;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.signup > .form {
+    height: 400px;
+}
+
+.signup > i {
+    color: rgba(0, 0, 0, 0.664);
+    font-size: 2rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.signup > i:hover {
+    color: black;
+}
+
+.signup > .form > .formButtonSign > button {
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    align-self: center;
+    margin-top: 5px;
+    background-color: green;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.signup > .form > .formButtonSign > button:hover {
+    filter: opacity(.6);
+}
+
+/* auxiliary classes */
+
+.hide {
+    display: none !important;
+}
+
+.wrong {
+    background-color: rgba(192, 95, 95, 0.322) !important;
+    border: 1px solid red !important;
+}
+
+/* media queries */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .form, .formActions {
+        width: 500px;
+    }
+}
+
+@media (min-width: 992px) {
+    .form, .formActions {
+        width: 500px;
+    }
+}
