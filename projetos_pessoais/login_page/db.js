@@ -1,19 +1,21 @@
-const connection = async() => {
-    if (global.connection && global.connection.state != 'disconected') {
-        return global.connection;
-    };
-    const mysql = require('mysql2/promise');
-    const con = mysql.createConnection("mysql://root:fragoso01@localhost:3306/vascodagama");
-    console.log('Connected');
-    global.connection = con;
-    return con;
-};
+require ("dotenv").config();
 
-const signUp = async(user) => {
-    const con = await connection();
-    const sql = 'INSERT INTO usuarios (s_nome_usuario, s_email_usuario, s_senha_usuario, d_nasc_usuario) VALUES (?, ?, ?, ?)';
-    const valores = [user.name, user.email, user.password, user.date];
-    await con.query(sql, valores);
-};
+const express = require('express');
+const app = express();
+const port = process.env.PORT;
 
-module.exports = {signUp};
+app.use(express.json());
+
+app.get('/', (req, res) => res.json({message: 'Funcionando!'}));
+
+app.listen(port, () => {console.log('Server on')});
+
+/////////////////////
+
+const mysql = require('mysql2/promise');
+
+const client = mysql.createPool(process.env.CONNECTION_STRING);
+
+const obterUsuarios = async() => {
+    const query = 
+};
