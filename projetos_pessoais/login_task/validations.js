@@ -15,7 +15,7 @@ const fPassSignConfirm = document.querySelector('#f_passSignConfirm');
 const eyeIcon = [...document.querySelectorAll('.eyeIcon')];
 const account = document.querySelector('#have');
 const forgot = document.querySelector('#forgot');
-const btnLogin = document.querySelector('#btnLogin');
+const btnLogin = document.querySelector('#loginBtn');
 const btnSign = document.querySelector('#btnSign');
 const arrowIcon = document.querySelector('#arrowIcon');
 
@@ -58,27 +58,24 @@ arrowIcon.addEventListener("click", () => {
 });
 
 //Signup operation
-btnSign.addEventListener("click", async() => {
+
+const signUpOperation = async() => {
     const endpoint = 'http://localhost:3000/users';
-    const bodyx = {
-        "name": fNome.value, 
-        "email": fEmail.value, 
-        "password": fPassSign.value, 
-        "date": fDate.value
-    };
     await fetch(endpoint, {
         method: "POST",
         mode: "no-cors",
-        headers: {"Content-Type":"application/json"},
-        body: bodyx 
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({
+            name: "guilherme",
+            email: "guilhermenoronhaf@gmail.com",
+            password: "fragoso01",
+            date: "2006-05-26"
+        })
     })
-    .then(res => {
-        if (res.status == 201) {
-            console.log('ok');
-        } else {
-            console.log('erro');
-        }
-    }).catch(err => {
-        console.log(err);
-    })
-})
+    .then(res => res.json())
+    .catch(err => {console.log(err)}) 
+};
+
+signUpOperation();

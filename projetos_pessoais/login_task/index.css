@@ -167,6 +167,7 @@ body, html {
     margin-top: 5px;
     background-color: green;
     color: white;
+    cursor: pointer;
     transition: all .2s ease-in-out;
 }
 
