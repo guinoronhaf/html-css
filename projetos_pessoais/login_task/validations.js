@@ -56,3 +56,29 @@ const backToLoginPage = () => {
 arrowIcon.addEventListener("click", () => {
     backToLoginPage();
 });
+
+//Signup operation
+btnSign.addEventListener("click", async() => {
+    const endpoint = 'http://localhost:3000/users';
+    const bodyx = {
+        "name": fNome.value, 
+        "email": fEmail.value, 
+        "password": fPassSign.value, 
+        "date": fDate.value
+    };
+    await fetch(endpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {"Content-Type":"application/json"},
+        body: bodyx 
+    })
+    .then(res => {
+        if (res.status == 201) {
+            console.log('ok');
+        } else {
+            console.log('erro');
+        }
+    }).catch(err => {
+        console.log(err);
+    })
+})
