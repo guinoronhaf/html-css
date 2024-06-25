@@ -58,23 +58,31 @@ arrowIcon.addEventListener("click", () => {
 });
 
 //Signup operation
-async function signUpOperation() {
+const signUpOperation = () => {
     const endpoint = 'http://localhost:3000/users';
-    const body = {
-        name: "Gilson",
-        email: "alberto@gmail.com",
-        password: "alberto1234",
-        date: "2019-09-23"
-    }
-    const response = await fetch(endpoint, {
-        method: 'POST',
-        body: JSON.stringify(body),
-        headers: {'Content-Type': 'application/json'}
+    fetch(endpoint, {
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            "name":fNome.value,
+            "email":fEmail.value,
+            "password":fPassSign.value,
+            "date":fDate.value
+        })
     })
+    .then(res => {
+        if (res.status == 201) {
+            console.log('ok');
+        } else {
+            console.log('erro');
+        }
+    })
+    .catch(err => {
+        console.log(`O erro é esse: ${err}`);
+    }) 
+};
 
-    return response.json();
-}
-
-btnSign.addEventListener("click", () => {
+btnSign.addEventListener("click", (e) => {
+    e.preventDefault();
     signUpOperation();
 });

@@ -4,6 +4,13 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT;
 const db = require('./db');
+const cors = require('cors');
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500',
+    optionsSuccessStatus: 201
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
@@ -24,9 +31,9 @@ app.get('/users/:id', async(req, res) => {
 app.get('/g', async(req, res) => {
     const resu = await db.getGreatestId();
     res.json(resu);
-})
+});
 
-app.post('/users', async(req, res) => {
+app.post('/users', cors(corsOptions), async(req, res) => {
     await db.addUser(req.body);
     res.sendStatus(201);
 });
