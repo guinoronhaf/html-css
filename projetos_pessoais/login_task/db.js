@@ -22,9 +22,9 @@ const addUser = async(user) => {
     await client.query(sql, values);
 };
 
-const updateUser = async(id, user) => {
-    const sql = 'UPDATE usuarios SET s_senha_usuarios=? WHERE i_id_usuarios=?';
-    const values = [user.password, id];
+const updateUser = async(email, user) => {
+    const sql = 'UPDATE usuarios SET s_senha_usuarios=? WHERE s_email_usuarios=?';
+    const values = [user.password, email];
     await client.query(sql, values);
 };
 

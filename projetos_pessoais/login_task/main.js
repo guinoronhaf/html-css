@@ -1,6 +1,7 @@
 //Sections
 const login = document.querySelector('#login');
 const signUp = document.querySelector('#signup');
+const forgotPage = document.querySelector('#forgotPage');
 
 //Inputs
 const fUser = document.querySelector('#f_user');
@@ -10,6 +11,8 @@ const fEmail = document.querySelector('#f_email');
 const fDate = document.querySelector('#f_date');
 const fPassSign = document.querySelector('#f_passSign');
 const fPassSignConfirm = document.querySelector('#f_passSignConfirm');
+const fgtEmail = document.querySelector('#fgtEmail');
+const newPass = document.querySelector('#nPass');
 
 //Buttons
 const eyeIcon = [...document.querySelectorAll('.eyeIcon')];
@@ -17,7 +20,8 @@ const account = document.querySelector('#have');
 const forgot = document.querySelector('#forgot');
 const btnLogin = document.querySelector('#loginBtn');
 const btnSign = document.querySelector('#btnSign');
-const arrowIcon = document.querySelector('#arrowIcon');
+const arrowIcon = [...document.querySelectorAll('section > i')];
+const btnUpdate = document.querySelector('#btnUpdate');
 
 //Function to visualize password
 eyeIcon.map(eye => {
@@ -34,12 +38,6 @@ eyeIcon.map(eye => {
     });
 });
 
-//"Don't you have an account?" page
-account.addEventListener("click", () => {
-    login.classList.add("hide");
-    signUp.classList.remove("hide");
-});
-
 //Login page
 const sections = [...document.getElementsByTagName('section')];
 
@@ -53,8 +51,16 @@ const backToLoginPage = () => {
     });
 }
 
-arrowIcon.addEventListener("click", () => {
-    backToLoginPage();
+arrowIcon.map((arrow) => {
+    arrow.addEventListener("click", () => {
+        backToLoginPage();
+    })
+});
+
+//"Don't you have an account?" page
+account.addEventListener("click", () => {
+    login.classList.add("hide");
+    signUp.classList.remove("hide");
 });
 
 //Signup operation
@@ -71,8 +77,13 @@ const signUpOperation = () => {
         })
     })
     .then(res => {
-        if (res.status == 201) {
+        if (res.status == 200) {
             console.log('ok');
+            const allInputs = [...document.querySelectorAll('.signup input')];
+            allInputs.map((inp) => {
+                inp.value = '';
+            });
+            backToLoginPage();
         } else {
             console.log('erro');
         }
@@ -85,4 +96,41 @@ const signUpOperation = () => {
 btnSign.addEventListener("click", (e) => {
     e.preventDefault();
     signUpOperation();
+});
+
+//"Forgot your password?" page
+forgot.addEventListener("click", () => {
+    login.classList.add('hide');
+    forgotPage.classList.remove('hide');
+});
+
+const updateOperation = () => {
+    const endpoint = `http://localhost:3000/users/${fgtEmail.value}`;
+    fetch(endpoint, {
+        method: "PATCH",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+            "password":newPass.value
+        })
+    })
+    .then(res => {
+        if (res.status == 200) {
+            console.log('ok')
+            const allInputs = [...document.querySelectorAll('.forgot input')];
+            allInputs.map((inp) => {
+                inp.value = '';
+            });
+            backToLoginPage();
+        } else {
+            console.log('erro')
+        }
+    })
+    .catch(err => {
+        console.log(`O erro é esse: ${err}`)
+    })
+};
+
+btnUpdate.addEventListener("click", (e) => {
+    e.preventDefault();
+    updateOperation();
 });

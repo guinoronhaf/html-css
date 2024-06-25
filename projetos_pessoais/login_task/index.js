@@ -7,7 +7,7 @@ const db = require('./db');
 const cors = require('cors');
 const corsOptions = {
     origin: 'http://127.0.0.1:5500',
-    optionsSuccessStatus: 201
+    optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
@@ -35,11 +35,11 @@ app.get('/g', async(req, res) => {
 
 app.post('/users', cors(corsOptions), async(req, res) => {
     await db.addUser(req.body);
-    res.sendStatus(201);
+    res.sendStatus(200);
 });
 
-app.patch('/users/:id', async(req, res) => {
-    await db.updateUser(req.params.id, req.body);
+app.patch('/users/:email', async(req, res) => {
+    await db.updateUser(req.params.email, req.body);
     res.sendStatus(200);
 });
 

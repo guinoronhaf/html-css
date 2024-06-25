@@ -85,14 +85,14 @@ body, html {
     outline: none;
 }
 
-.formPasswordInput > .eyeIcon {
+.eyeIcon {
     color: rgba(0, 0, 0, 0.664);
     font-size: 1.2rem;
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
 
-.formPasswordInput > .eyeIcon:hover {
+.eyeIcon:hover {
     color: black;
 }
 
@@ -101,7 +101,8 @@ body, html {
     align-self: center;
 }
 
-.formButton > input {
+.button {
+    padding: 10px;
     background-color: green;
     color: white;
     letter-spacing: 1.2px;
@@ -109,9 +110,10 @@ body, html {
     border: none !important;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    border-radius: 5px;
 }
 
-.formButton > input:hover {
+.button:hover {
     filter: opacity(.6);
 }
 
@@ -159,20 +161,56 @@ body, html {
     color: black;
 }
 
-.signup > .form > .formButtonSign > button {
-    padding: 10px;
-    border-radius: 5px;
-    width: 50%;
+#btnSign {
     align-self: center;
-    margin-top: 5px;
-    background-color: green;
-    color: white;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+    width: 50%;
 }
 
-.signup > .form > .formButtonSign > button:hover {
-    filter: opacity(.6);
+.forgot {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot > .form > .newPassword {
+    margin-bottom: 50px;
+}
+
+.forgot > .form > .newPassword > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    width: 100%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.forgot > .form > .newPassword > div > input {
+    background-color: transparent;
+    border: none !important;
+}
+
+.forgot > .form > .newPassword > div > input:focus {
+    outline: none;
+}
+
+.forgot > .form > .formButtonUpdate > button {
+    width: 50%;
+    align-self: center;
+}
+
+section > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 /* auxiliary classes */
@@ -184,6 +222,15 @@ body, html {
 .wrong {
     background-color: rgba(192, 95, 95, 0.322) !important;
     border: 1px solid red !important;
+}
+
+.correct {
+    background-color: rgba(0, 128, 0, 0.534) !important;
+    border: 1px solid green !important;
+}
+
+label {
+    cursor: pointer;
 }
 
 /* media queries */
